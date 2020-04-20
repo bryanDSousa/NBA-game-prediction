@@ -235,7 +235,7 @@ Local["Porcentaje de tiro de tres"] = 100 * Local['Tiros de tres anotados'] / Lo
 #Date,Year,Season tal cual
 Local.rename(columns={
     'Team': 'local_team',
-    'Tiros anotados': 'local_fga', 
+    'Tiros anotados': 'local_fg', 
     'Tiros intentados': 'local_fga', 
     'Tiros de tres anotados': 'local_fg3',
     'Tiros de tres intentados': 'local_fg3a',
@@ -271,7 +271,7 @@ Visitante["Porcentaje de tiro de tres"] = 100 *  Visitante['Tiros de tres anotad
 #Tiros anotados,Tiros intentados,Tiros de tres anotados,Tiros de tres intentados,Tiros libres anotados,Tiros libres intentados,Rebotes ofensivos,Rebotes defensivo,Rebotes total,Asistencias,Robos,Tapones,Perdidas,Faltas,Puntos
 Visitante.rename(columns={
     'Team': 'visitor_team',
-    'Tiros anotados': 'visitor_fga', 
+    'Tiros anotados': 'visitor_fg', 
     'Tiros intentados': 'visitor_fga', 
     'Tiros de tres anotados': 'visitor_fg3',
     'Tiros de tres intentados': 'visitor_fg3a',
