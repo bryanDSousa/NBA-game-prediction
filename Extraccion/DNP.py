@@ -95,7 +95,7 @@ equiposLista = [
 ]
 k=0
 counter=0
-seasons = np.arange(2010,2021,1)
+seasons = np.arange(2011,2021,1)
 urlBase = "https://www.basketball-reference.com"
 tiempo_inicial = time.clock()
 for season in seasons:
@@ -112,7 +112,7 @@ for season in seasons:
                 opponent = r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[j].split(".html\">")[2].split("<")[0]
                 puntos = r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[j].split("pts\" >")[1].split("<")[0]
                 puntos_rival = r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[j].split("pts\" >")[2].split("<")[0]
-                if(r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[1].split("game_location\" >")[1].split("<")[0] == ''):
+                if(mapaEquipos[equipo] in boxcore_url):     #CAMBIA EL CRITERIO PARA LOCAL/VISITANTE
                     Local = True
                 else:
                     Local = False
@@ -178,7 +178,7 @@ for season in seasons:
                                         name,
                                         reason]
                         k = k + 1 
-
+            
                     if ("Player Suspended" in r_boxcore.text.split(sep_basic)[2].split("player\" csk=\"")[i]):
                         reason = "Player Suspended" 
                         name = r_boxcore.text.split(sep_basic)[2].split("player\" csk=\"")[i].split("<")[0].split("\"")[0]
@@ -201,11 +201,33 @@ for season in seasons:
                     i=i+1
                     if k % 100 == 0:
                         os.system('cls')
+                        DNP_DF.head(10)
                         time_transcurrido = time.clock() - tiempo_inicial
                         print(equipo, season)
                         print(k, "lineas añadidas al DF")
                         print(time_transcurrido / 60, "minutos")
                 j = j + 1
+                n_jugadores_inactive = len(r_boxcore.text.split('Inactive')[1].split('referees')[0].split(mapaEquipos[equipo])[1].split('strong')[1].split("html\">"))
+                i = 1
+                while i < n_jugadores_inactive:
+                    reason = "Player Inactive" 
+                    name = r_boxcore.text.split('Inactive')[1].split('referees')[0].split(mapaEquipos[equipo])[1].split('strong')[1].split("html\">")[i].split('<')[0]
+                    i= i + 1
+                    DNP_DF.loc[k] = [equipo, 
+                                    season,
+                                    date,
+                                    year,
+                                    boxcore_url,
+                                    Local,
+                                    opponent,
+                                    puntos,
+                                    puntos_rival,
+                                    resultado,
+                                    name,
+                                    reason]
+                    k = k + 1 
+                #r.text.split('Inactive')[1].split('referees')[0].split(mapaEquipos[equipo])[1].split('strong')[1]
+
 
 directorio = "DNP_"+str(time.strftime("%d_%m_%y"))
 

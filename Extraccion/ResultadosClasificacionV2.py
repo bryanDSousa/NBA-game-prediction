@@ -87,6 +87,9 @@ for season in seasons:
                         print(k, "lineas añadidas al DF")
                     i=1+i
 
+Clasificacion_Fechas_DF = Clasificacion_Fechas_DF.drop_duplicates(keep='first')
+
+
 Resultados_DF = pd.DataFrame(index=np.arange(0, 400), columns=["Date", "Year", "Season", "Team", "Opponent", "Local",
                                                                "Points", "Opponent_Points", "Result", "Streak",
                                                               "visitor_fg", "visitor_fga", "visitor_fg_pct", "visitor_fg3",

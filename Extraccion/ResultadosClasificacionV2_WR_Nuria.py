@@ -18,7 +18,7 @@ Clasificacion_Fechas_DF = pd.DataFrame(index=np.arange(0, 400), columns=["Date",
 
 k=0
 counter = 0
-seasons = np.arange(2016,2018,1)
+seasons = np.arange(2015,2021,1)
 months = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May" ]
 days = np.arange(1,32,1)
 for season in seasons:
@@ -87,6 +87,9 @@ for season in seasons:
                         print(k, "lineas añadidas al DF")
                     i=1+i
 
+Clasificacion_Fechas_DF = Clasificacion_Fechas_DF.drop_duplicates(keep='first')
+
+
 Resultados_DF = pd.DataFrame(index=np.arange(0, 400), columns=["Date", "Year", "Season", "Team", "Opponent", "Local",
                                                                "Points", "Opponent_Points", "Result", "Streak",
                                                               "visitor_fg", "visitor_fga", "visitor_fg_pct", "visitor_fg3",
@@ -144,7 +147,7 @@ mapaEquipos = {
 }
 
 equiposLista = [
-"Philadelphia 76ers", 
+"Philadelphia 76ers" ,
 "Detroit Pistons",
 "Chicago Bulls",
 "Minnesota Timberwolves",
@@ -332,8 +335,9 @@ for season in seasons:
             i = i + 1
 Resultados_DF = Resultados_DF.dropna()
 
+#REVISAR LOCAL CON NURIA
 Resultados_DF_Local = Resultados_DF[Resultados_DF["Local"]]
-
+#Resultados_DF_Local = Resultados_DF
 
 mapaEquipos2 = {
     'Boston Celtics': 'Boston', 
@@ -380,10 +384,10 @@ while i < len(Resultados_DF_Local):
     team = row['Team']
     opponent = row['Opponent']
     row_com_team = Clasificacion_Fechas_DF[ (Clasificacion_Fechas_DF['Team'] == mapaEquipos2[team]) & 
-                                 (Clasificacion_Fechas_DF['Year'] == year) & 
+                                 (Clasificacion_Fechas_DF['Year'] == int(year)) &     
                                  (Clasificacion_Fechas_DF['Date'] == date)]
     row_com_opp =  Clasificacion_Fechas_DF[(Clasificacion_Fechas_DF['Team'] == mapaEquipos2[opponent]) & 
-                                 (Clasificacion_Fechas_DF['Year'] == year) & 
+                                 (Clasificacion_Fechas_DF['Year'] == int(year)) &    
                                  (Clasificacion_Fechas_DF['Date'] == date)]
     df_row.loc[0]=row
     df_row= df_row.dropna()
@@ -399,8 +403,8 @@ while i < len(Resultados_DF_Local):
     'Cnf_win': 'visitor_Cnf_win', 'Cnf_lose': 'visitor_Cnf_lose', 'Icf_win': 'visitor_Icf_win',
    'Icf_lose': 'visitor_Icf_lose'}, inplace=True)  #VISITANTE
 
-  
-        
+
+
     df_aux = df_row.merge(row_com_team, on='Date', how='left').merge(row_com_opp, on='Date', how='left')
     if(i == 0):
         df_final = df_aux
@@ -422,6 +426,6 @@ except:
     
 os.chdir(directorio)
 
-nombre_fichero='partidos_Nuria_2016_2017'+str(time.strftime("%d_%m_%y"))+'.csv'
+nombre_fichero='partidos_Nuria_'+str(time.strftime("%d_%m_%y"))+'.csv'
 df_final.to_csv(nombre_fichero, header=True, index=False)
 os.chdir("..")

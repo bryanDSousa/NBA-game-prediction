@@ -146,14 +146,14 @@ for season in seasons:
                 opponent = r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[j].split(".html\">")[2].split("<")[0]
                 puntos = r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[j].split("pts\" >")[1].split("<")[0]
                 puntos_rival = r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[j].split("pts\" >")[2].split("<")[0]
-                if(r.text.split("Regular Season Table")[1].split("href=\"/boxscores/index.cgi?month=")[1].split("game_location\" >")[1].split("<")[0] == ''):
+                boxcore_url= r.text.split("Regular Season Table")[1].split("\"box_score_text\" ><a href=\"")[j].split("\">")[0]
+                if(mapaEquipos[equipo] in boxcore_url):     #CAMBIA EL CRITERIO PARA LOCAL/VISITANTE
                     Local = True
                 else:
                     Local = False
-                boxcore_url= r.text.split("Regular Season Table")[1].split("\"box_score_text\" ><a href=\"")[j].split("\">")[0]
                 url_req_boxcore = urlBase + boxcore_url
                 r_boxcore = rq.get(url_req_boxcore)
-                if(puntos > puntos_rival):
+                if(int(puntos) > int(puntos_rival)):         #CAMBIA LA COMPARACION POR BUG
                     resultado = "W" 
                 else:
                     resultado = "L"
