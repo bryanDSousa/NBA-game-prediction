@@ -129,7 +129,7 @@ equiposLista = [
 ]
 k=0
 counter=0
-seasons = np.arange(2010,2021,1)
+seasons = np.arange(2016,2021,1)
 urlBase = "https://www.basketball-reference.com"
 tiempo_inicial = time.clock()
 for season in seasons:
@@ -269,7 +269,7 @@ for season in seasons:
                         print(time_transcurrido / 60, "minutos")
                 j = j + 1
                                                               
-directorio = "Stats_jugadores"+str(time.strftime("%d_%m_%y"))
+directorio = "Jugadores"
 
 try:
     os.stat(directorio)

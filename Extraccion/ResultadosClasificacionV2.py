@@ -18,7 +18,7 @@ Clasificacion_Fechas_DF = pd.DataFrame(index=np.arange(0, 400), columns=["Date",
 
 k=0
 counter = 0
-seasons = np.arange(2020,2021,1)
+seasons = np.arange(2016,2018,1)
 months = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May" ]
 days = np.arange(1,32,1)
 for season in seasons:
@@ -425,15 +425,15 @@ while i < len(Resultados_DF):
     df_row= df_row.dropna()
 
     row_com_team.rename(columns={'Conf_position': 'local_Conf_position', 'Win': 'local_Win', 'Lose': 'local_Lose',
-   'Percentagewl': 'local_Percentagewl', 'Dif_leader': 'local_Dif_leader', 'Home_win': 'local_Home_win', 'Home_lose': 'local_Home_lose', 
+    'Percentagewl': 'local_Percentagewl', 'Dif_leader': 'local_Dif_leader', 'Home_win': 'local_Home_win', 'Home_lose': 'local_Home_lose', 
     'Away_win': 'local_Away_win', 'Away_lose': 'local_Away_lose', 'Div_win': 'local_Div_win', 'Div_lose': 'local_Div_lose',
     'Cnf_win': 'local_Cnf_win', 'Cnf_lose': 'local_Cnf_lose', 'Icf_win': 'local_Icf_win',
-   'Icf_lose': 'local_Icf_lose'}, inplace=True) #LOCAL
+    'Icf_lose': 'local_Icf_lose'}, inplace=True) #LOCAL
     row_com_opp.rename(columns={'Conf_position': 'visitor_Conf_position', 'Win': 'visitor_Win', 'Lose': 'visitor_Lose',
-   'Percentagewl': 'visitor_Percentagewl', 'Dif_leader': 'visitor_Dif_leader', 'Home_win': 'visitor_Home_win', 'Home_lose': 'visitor_Home_lose', 
+    'Percentagewl': 'visitor_Percentagewl', 'Dif_leader': 'visitor_Dif_leader', 'Home_win': 'visitor_Home_win', 'Home_lose': 'visitor_Home_lose', 
     'Away_win': 'visitor_Away_win', 'Away_lose': 'visitor_Away_lose', 'Div_win': 'visitor_Div_win', 'Div_lose': 'visitor_Div_lose',
     'Cnf_win': 'visitor_Cnf_win', 'Cnf_lose': 'visitor_Cnf_lose', 'Icf_win': 'visitor_Icf_win',
-   'Icf_lose': 'visitor_Icf_lose'}, inplace=True)  #VISITANTE
+    'Icf_lose': 'visitor_Icf_lose'}, inplace=True)  #VISITANTE
 
   
         
@@ -449,7 +449,7 @@ while i < len(Resultados_DF):
 df_final = df_final.drop(['Team', 'Team_y'], axis=1)
 df_final.rename(columns={'Team_x': 'local_team', 'Opponent': 'visitor_team'}, inplace = True)
 
-directorio = "partidos_V3_"+str(time.strftime("%d_%m_%y"))
+directorio = "partidos_V3_22_04_20"
 
 try:
     os.stat(directorio)
@@ -458,6 +458,6 @@ except:
     
 os.chdir(directorio)
 
-nombre_fichero='partidos_V3_'+str(time.strftime("%d_%m_%y"))+'.csv'
+nombre_fichero='partidos_V3_2016_2017.csv'
 df_final.to_csv(nombre_fichero, header=True, index=False)
 os.chdir("..")

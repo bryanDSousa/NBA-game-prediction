@@ -21,7 +21,7 @@ Stats_DF = pd.DataFrame(index=np.arange(0, 400), columns=[
 "Opponent Points",
 "Result",
 "Name",
-"Minutes Played",
+#"Minutes Played",
 "Tiros anotados",
 "Tiros intentados",
 "Tiros de tres anotados",
@@ -112,7 +112,7 @@ equiposLista = [
 ]
 k=0
 counter=0
-seasons = np.arange(2018,2021,1)
+seasons = np.arange(2016,2018,1)
 urlBase = "https://www.basketball-reference.com"
 tiempo_inicial = time.clock()
 for season in seasons:
@@ -154,7 +154,7 @@ for season in seasons:
                         time_transcurrido = time.clock() - tiempo_inicial
                     else:
                         name = r_boxcore.text.split(sep_equipo)[2].split("player\" csk=\"")[i].split("<")[0].split("\"")[0]
-                        mp = r_boxcore.text.split(sep_equipo)[2].split("player\" csk=\"")[i].split("mp\" csk=")[1].split(">")[1].split("<")[0]
+                        #mp = r_boxcore.text.split(sep_equipo)[2].split("player\" csk=\"")[i].split("mp\" csk=")[1].split(">")[1].split("<")[0]
                         fg = r_boxcore.text.split(sep_equipo)[2].split("player\" csk=\"")[i].split("fg\" >")[1].split("<")[0]
                         fga = r_boxcore.text.split(sep_equipo)[2].split("player\" csk=\"")[i].split("fga\" >")[1].split("<")[0]
                         #fg_pct = "0" + r_boxcore.text.split(sep_equipo)[2].split("player\" csk=\"")[i].split("fg_pct\" >")[1].split("<")[0]
@@ -186,7 +186,7 @@ for season in seasons:
                                                 puntos_rival,
                                                 resultado,
                                                 name,
-                                                mp,
+                                                #mp,
                                                 int(fg),
                                                 int(fga),
                                                 int(fg3),
@@ -221,7 +221,7 @@ Stats_DF = Stats_DF.dropna()
 
 #local_df
 Local = Stats_DF[Stats_DF["Local"] == True]
-Local = Local.drop(['Name', 'Local', 'Opponent', 'Team Points', 'Opponent Points', 'Minutes Played', 'MasMenos'], axis=1)
+Local = Local.drop(['Name', 'Local', 'Opponent', 'Team Points', 'Opponent Points', 'MasMenos'], axis=1)
 Local = Local.groupby(
              ['ID Partido', 'Date', 'Year', 'Season', 'Team', 'Result'], as_index = False
                      ).sum()
@@ -257,7 +257,7 @@ Local.rename(columns={
 
 #visitante_DF 
 Visitante = Stats_DF[Stats_DF["Local"] == False]
-Visitante = Visitante.drop(['Name', 'Local', 'Result', 'Opponent', 'Team Points', 'Opponent Points', 'Minutes Played', 'MasMenos', 'Result','Date', 'Year', 'Season'], axis=1)
+Visitante = Visitante.drop(['Name', 'Local', 'Result', 'Opponent', 'Team Points', 'Opponent Points', 'MasMenos', 'Result','Date', 'Year', 'Season'], axis=1)
 Visitante = Visitante.groupby(
              ['ID Partido', 'Team'], as_index = False
                      ).sum()
@@ -293,7 +293,7 @@ Visitante.rename(columns={
 
 Stats_h1 = Local.merge(Visitante, on='ID Partido', how='left')
 
-directorio = "Stats_jugadores_H1_"+str(time.strftime("%d_%m_%y"))
+directorio = "Stats_jugadores_H1_19_04_20"
 
 try:
     os.stat(directorio)
@@ -303,6 +303,6 @@ except:
 os.chdir(directorio)
 
 #nombre_fichero='Stats_jugadores_'+str(time.strftime("%d_%m_%y"))+'.csv'
-Stats_h1.to_csv('stats_h1.csv', header=True, index=False)
+Stats_h1.to_csv('stats_h1_2016_2017.csv', header=True, index=False)
 
 os.chdir("..")
