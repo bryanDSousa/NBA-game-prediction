@@ -18,7 +18,7 @@ Clasificacion_Fechas_DF = pd.DataFrame(index=np.arange(0, 400), columns=["Date",
 
 k=0
 counter = 0
-seasons = np.arange(2010,2021,1)
+seasons = np.arange(2016,2018,1)
 months = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May" ]
 days = np.arange(1,32,1)
 for season in seasons:
@@ -186,7 +186,6 @@ i=1
 
 counter=0
 k=0
-seasons = np.arange(2010,2021,1)
 urlBase = "https://www.basketball-reference.com"
 for season in seasons:
     for equipo in equiposLista: 
@@ -335,9 +334,41 @@ for season in seasons:
                                                               
             i = i + 1
 Resultados_DF = Resultados_DF.dropna()
+li = []
+for equipo in equiposLista:
+    for season in seasons:
+        df = Resultados_DF[(Resultados_DF['Team'] == equipo) & (Resultados_DF['Season'] == season)]
+        df.loc[df['Result'] == 'W', 'Result'] = 1
+        df.loc[df['Result'] == 'L', 'Result'] = 0
+        df['Victorias ultimos 10'] = df['Result'].rolling(10, min_periods = 1).sum()
+        df.loc[df['Result'] == 1, 'Result'] = 'W'
+        df.loc[df['Result'] == 0, 'Result'] = 'L'
+        df.loc[df['Result'] == 'W', 'Result'] = 0
+        df.loc[df['Result'] == 'L', 'Result'] = 1
+        df['Derrotas ultimos 10'] = df['Result'].rolling(10, min_periods = 1).sum()
+        li.append(df)
+    
+Resultados_DF1 = pd.concat(li, axis=0, ignore_index=True)
+Resultados_DF1 = Resultados_DF1.dropna()
+#Resultados_DF1 = Resultados_DF1.dropna()
 
-Resultados_DF_Local = Resultados_DF[Resultados_DF["Local"]]
+# separar el df en local y visitante, renombrar campos y hacer el join 
+# en uno hay que quedarse solo con las variables objetivo
 
+Resultados_DF_Local = Resultados_DF1[Resultados_DF["Local"]]
+Resultados_DF_Local.rename(columns={"Victorias ultimos 10": "LOCAL_Ultimos10Victorias",
+                                    "Derrotas ultimos 10": "LOCAL_Ultimos10VDerrotas", 
+                                    "Streak": "LOCAL_Racha"},
+                                    inplace=True)
+
+Resultados_DF_Visitante = Resultados_DF1[Resultados_DF["Local"] == False]
+Resultados_DF_Visitante = Resultados_DF_Visitante[["boxcore_url", "Victorias ultimos 10", "Derrotas ultimos 10", "Streak"]]
+Resultados_DF_Visitante.rename(columns={"Victorias ultimos 10": "VISITANTE_Ultimos10Victorias",
+                                        "Derrotas ultimos 10": "VISITANTE_Ultimos10VDerrotas", 
+                                        "Streak": "VISITANTE_Racha"},
+                                        inplace=True)
+
+Resultados_DF = Resultados_DF_Local.merge(Resultados_DF_Visitante, on='boxcore_url', how='left')
 
 mapaEquipos2 = {
     'Boston Celtics': 'Boston', 
@@ -376,33 +407,33 @@ mapaEquipos2 = {
 }
 
 i=0
-df_row = pd.DataFrame(index=np.arange(0, 400), columns=Resultados_DF_Local.columns)
-while i < len(Resultados_DF_Local):
-    row = Resultados_DF_Local.iloc[i] 
+df_row = pd.DataFrame(index=np.arange(0, 400), columns=Resultados_DF.columns)
+while i < len(Resultados_DF):
+    row = Resultados_DF.iloc[i] 
     date = row['Date']
     year = row['Year']
     team = row['Team']
     opponent = row['Opponent']
 
     row_com_team = Clasificacion_Fechas_DF[ (Clasificacion_Fechas_DF['Team'] == mapaEquipos2[team]) & 
-                                 (Clasificacion_Fechas_DF['Year'] == year) & 
+                                 (Clasificacion_Fechas_DF['Year'] == int(year)) & 
                                  (Clasificacion_Fechas_DF['Date'] == date)]
     row_com_opp =  Clasificacion_Fechas_DF[(Clasificacion_Fechas_DF['Team'] == mapaEquipos2[opponent]) & 
-                                 (Clasificacion_Fechas_DF['Year'] == year) & 
+                                 (Clasificacion_Fechas_DF['Year'] == int(year)) & 
                                  (Clasificacion_Fechas_DF['Date'] == date)]
     df_row.loc[0]=row
     df_row= df_row.dropna()
 
     row_com_team.rename(columns={'Conf_position': 'local_Conf_position', 'Win': 'local_Win', 'Lose': 'local_Lose',
-   'Percentagewl': 'local_Percentagewl', 'Dif_leader': 'local_Dif_leader', 'Home_win': 'local_Home_win', 'Home_lose': 'local_Home_lose', 
+    'Percentagewl': 'local_Percentagewl', 'Dif_leader': 'local_Dif_leader', 'Home_win': 'local_Home_win', 'Home_lose': 'local_Home_lose', 
     'Away_win': 'local_Away_win', 'Away_lose': 'local_Away_lose', 'Div_win': 'local_Div_win', 'Div_lose': 'local_Div_lose',
     'Cnf_win': 'local_Cnf_win', 'Cnf_lose': 'local_Cnf_lose', 'Icf_win': 'local_Icf_win',
-   'Icf_lose': 'local_Icf_lose'}, inplace=True) #LOCAL
+    'Icf_lose': 'local_Icf_lose'}, inplace=True) #LOCAL
     row_com_opp.rename(columns={'Conf_position': 'visitor_Conf_position', 'Win': 'visitor_Win', 'Lose': 'visitor_Lose',
-   'Percentagewl': 'visitor_Percentagewl', 'Dif_leader': 'visitor_Dif_leader', 'Home_win': 'visitor_Home_win', 'Home_lose': 'visitor_Home_lose', 
+    'Percentagewl': 'visitor_Percentagewl', 'Dif_leader': 'visitor_Dif_leader', 'Home_win': 'visitor_Home_win', 'Home_lose': 'visitor_Home_lose', 
     'Away_win': 'visitor_Away_win', 'Away_lose': 'visitor_Away_lose', 'Div_win': 'visitor_Div_win', 'Div_lose': 'visitor_Div_lose',
     'Cnf_win': 'visitor_Cnf_win', 'Cnf_lose': 'visitor_Cnf_lose', 'Icf_win': 'visitor_Icf_win',
-   'Icf_lose': 'visitor_Icf_lose'}, inplace=True)  #VISITANTE
+    'Icf_lose': 'visitor_Icf_lose'}, inplace=True)  #VISITANTE
 
   
         
@@ -418,7 +449,7 @@ while i < len(Resultados_DF_Local):
 df_final = df_final.drop(['Team', 'Team_y'], axis=1)
 df_final.rename(columns={'Team_x': 'local_team', 'Opponent': 'visitor_team'}, inplace = True)
 
-directorio = "partidosJoinv3"+str(time.strftime("%d_%m_%y"))
+directorio = "partidos_V3_22_04_20"
 
 try:
     os.stat(directorio)
@@ -427,6 +458,6 @@ except:
     
 os.chdir(directorio)
 
-nombre_fichero='partidos_joinv3'+str(time.strftime("%d_%m_%y"))+'.csv'
+nombre_fichero='partidos_V3_2016_2017.csv'
 df_final.to_csv(nombre_fichero, header=True, index=False)
 os.chdir("..")
