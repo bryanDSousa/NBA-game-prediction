@@ -95,7 +95,7 @@ equiposLista = [
 ]
 k=0
 counter=0
-seasons = np.arange(2011,2021,1)
+seasons = np.arange(2016,2021,1)
 urlBase = "https://www.basketball-reference.com"
 tiempo_inicial = time.clock()
 for season in seasons:

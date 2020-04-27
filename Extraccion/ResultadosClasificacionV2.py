@@ -2,7 +2,7 @@ import numpy as np
 import requests as rq
 import json
 import time
-from datetime import datetime
+import datetime
 import pandas as pd
 from unidecode import unidecode
 from urllib.parse import unquote
@@ -20,6 +20,16 @@ k=0
 counter = 0
 seasons = np.arange(2016,2018,1)
 months = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May" ]
+month_map = {
+"Oct": 10,
+"Nov": 11,
+"Dec": 12,
+"Jan": 1,
+"Feb": 2,
+"Mar": 3,
+"Apr": 4,
+"May": 5 
+}
 days = np.arange(1,32,1)
 for season in seasons:
     for month in months:
@@ -33,17 +43,20 @@ for season in seasons:
             i=1
             j=1
             if(r.text.split("<title>")[1].split("had")[0] != "No NBA games " ):
-                while i<31:
-                    
-                    date = r.text.split("after")[1].split("in")[0].strip()
-                    date1 = int(date.split(" ")[1]) + 1
-                    date2 = date.split(" ")[0]
-                    date = date2 + " " + str(date1)
+                while i<31:  #NUMERO DE EQUIPOS, NO DIAS DEL MES
                     if(month == "Oct" or month == "Nov" or month == "Dec"):
                         year = season - 1
                     else:
                         year = season
-                        
+
+                    try:
+                        date = datetime.datetime(int(year),month_map[month],day)
+                        date += datetime.timedelta(days=1)
+                        date = date.strftime("%b %d").replace(" 0", " ")
+                    except:
+                        #EJ: 31 de Febrero. Se sale del bucle
+                        break
+
                     team=r.text.split("season="+str(season)+"\">")[i].split("<")[0]
 
                     win=r.text.split("season="+str(season)+"\">")[i].split("\"> ")[1].split("<")[0].split("-")[0]
@@ -449,7 +462,7 @@ while i < len(Resultados_DF):
 df_final = df_final.drop(['Team', 'Team_y'], axis=1)
 df_final.rename(columns={'Team_x': 'local_team', 'Opponent': 'visitor_team'}, inplace = True)
 
-directorio = "partidos_V3_22_04_20"
+directorio = "partidos_V3_27_04_20"
 
 try:
     os.stat(directorio)
