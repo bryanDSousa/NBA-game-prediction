@@ -262,5 +262,7 @@ df_joined = df_1_local.merge(df_1_visitante, on = "ID Partido", how = "left")
 
 Resultados_clasificacion_final = Resultados_clasificacion_final.merge(df_joined, on = "ID Partido", how = "left" )
 
+Resultados_clasificacion_final["local_ft_pct"].fillna(0, inplace=True)
+Resultados_clasificacion_final["visitor_ft_pct"].fillna(0, inplace=True)
 
 Resultados_clasificacion_final.to_csv("input.csv", header=True, index=False)
