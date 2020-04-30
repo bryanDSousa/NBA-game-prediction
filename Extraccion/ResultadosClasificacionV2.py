@@ -18,7 +18,7 @@ Clasificacion_Fechas_DF = pd.DataFrame(index=np.arange(0, 400), columns=["Date",
 
 k=0
 counter = 0
-seasons = np.arange(2016,2018,1)
+seasons = np.arange(2020,2021,1)
 months = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May" ]
 month_map = {
 "Oct": 10,
@@ -348,9 +348,12 @@ for season in seasons:
             i = i + 1
 Resultados_DF = Resultados_DF.dropna()
 li = []
+Resultados_DF["FechaOrd"] = Resultados_DF["boxcore_url"].str.slice(11, 19)
+
 for equipo in equiposLista:
     for season in seasons:
         df = Resultados_DF[(Resultados_DF['Team'] == equipo) & (Resultados_DF['Season'] == season)]
+        df = df.sort_values(by=['FechaOrd'])
         df.loc[df['Result'] == 'W', 'Result'] = 1
         df.loc[df['Result'] == 'L', 'Result'] = 0
         df['Victorias ultimos 10'] = df['Result'].rolling(10, min_periods = 1).sum()
@@ -362,7 +365,7 @@ for equipo in equiposLista:
         li.append(df)
     
 Resultados_DF1 = pd.concat(li, axis=0, ignore_index=True)
-Resultados_DF1 = Resultados_DF1.dropna()
+
 #Resultados_DF1 = Resultados_DF1.dropna()
 
 # separar el df en local y visitante, renombrar campos y hacer el join 
@@ -370,14 +373,14 @@ Resultados_DF1 = Resultados_DF1.dropna()
 
 Resultados_DF_Local = Resultados_DF1[Resultados_DF["Local"]]
 Resultados_DF_Local.rename(columns={"Victorias ultimos 10": "LOCAL_Ultimos10Victorias",
-                                    "Derrotas ultimos 10": "LOCAL_Ultimos10VDerrotas", 
+                                    "Derrotas ultimos 10": "LOCAL_Ultimos10Derrotas", 
                                     "Streak": "LOCAL_Racha"},
                                     inplace=True)
 
 Resultados_DF_Visitante = Resultados_DF1[Resultados_DF["Local"] == False]
 Resultados_DF_Visitante = Resultados_DF_Visitante[["boxcore_url", "Victorias ultimos 10", "Derrotas ultimos 10", "Streak"]]
 Resultados_DF_Visitante.rename(columns={"Victorias ultimos 10": "VISITANTE_Ultimos10Victorias",
-                                        "Derrotas ultimos 10": "VISITANTE_Ultimos10VDerrotas", 
+                                        "Derrotas ultimos 10": "VISITANTE_Ultimos10Derrotas", 
                                         "Streak": "VISITANTE_Racha"},
                                         inplace=True)
 
@@ -462,7 +465,7 @@ while i < len(Resultados_DF):
 df_final = df_final.drop(['Team', 'Team_y'], axis=1)
 df_final.rename(columns={'Team_x': 'local_team', 'Opponent': 'visitor_team'}, inplace = True)
 
-directorio = "partidos_V3_27_04_20"
+directorio = "partidos_V3_30_04_20"
 
 try:
     os.stat(directorio)
@@ -471,6 +474,6 @@ except:
     
 os.chdir(directorio)
 
-nombre_fichero='partidos_V3_2016_2017.csv'
+nombre_fichero='partidos_V3_2020.csv'
 df_final.to_csv(nombre_fichero, header=True, index=False)
 os.chdir("..")

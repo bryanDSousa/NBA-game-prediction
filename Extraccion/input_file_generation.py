@@ -5,7 +5,7 @@ import warnings
 
 warnings.filterwarnings(action='ignore')
 
-path='partidos_V3_22_04_20'
+path='partidos_V3_30_04_20'
 names_list = os.listdir(path)
 li = []
 
@@ -27,9 +27,9 @@ lista_columnas = [
  "LOCAL_Racha", 
  "boxcore_url", 
  "LOCAL_Ultimos10Victorias", 
- "LOCAL_Ultimos10VDerrotas", 
+ "LOCAL_Ultimos10Derrotas", 
  "VISITANTE_Ultimos10Victorias", 
- "VISITANTE_Ultimos10VDerrotas", 
+ "VISITANTE_Ultimos10Derrotas", 
  "VISITANTE_Racha", 
  "local_Conf_position", 
  "local_Win", 
@@ -66,13 +66,14 @@ lista_columnas = [
 
 
 Resultados_clasificacion = Resultados_clasificacion[lista_columnas]
-Resultados_clasificacion = Resultados_clasificacion.dropna()
+#Resultados_clasificacion = Resultados_clasificacion.dropna()
 Resultados_clasificacion.rename( columns = {
                                 "boxcore_url": "ID Partido",
                                 "Year_x": "Year", 
                                 "Season_x": "Season"},  
-                                inplace = True)        
+                                inplace = True)  
 
+#Resultados_clasificacion.to_csv("1.csv", header=True, index=False)
 path = "Stats_jugadores_H1_19_04_20"
 names_list = os.listdir(path)
 li = []
@@ -124,6 +125,8 @@ lista_columnas = ["ID Partido",
 stats_h1 = stats_h1[lista_columnas]
 
 Resultados_clasificacion_final = Resultados_clasificacion.merge(stats_h1, on = "ID Partido", how = "left")
+
+#Resultados_clasificacion_final.to_csv("2.csv", header=True, index=False)
 
 # Sueldos:
 path = "Sueldos"
@@ -194,9 +197,10 @@ divisiones.rename(columns={"Local_Conferencia": "Visitor_Conferencia",
                             inplace=True)
 
 Resultados_clasificacion_final = Resultados_clasificacion_final.merge(divisiones, on = "visitor_team", how = "left" )
+#Resultados_clasificacion_final.to_csv("partidos_prueba.csv", header=True, index=False)
 
 
-# AWS. BUG NULLS EN VISITOR AWS 
+# AWS.  
 
 jugadores = pd.read_csv('Jugadores/Stats_jugadores_27_04_20.csv')
 jugadores = jugadores.dropna()
@@ -237,16 +241,25 @@ jugadoresAWS['AWS'] = jugadoresAWS['Pts'] + jugadoresAWS['BR'] + jugadoresAWS['B
 li = []
 seasons = np.arange(2016,2021,1)
 namelist = jugadoresAWS['Name'].unique()
-for name in namelist:
-    for season in seasons:
+#sacar campo fecha y ordenar
+jugadoresAWS["FechaOrd"] = jugadoresAWS["ID Partido"].str.slice(11, 19)
+#print(jugadoresAWS["FechaOrd"])
+for season in seasons:
+    for name in namelist:
         df = jugadoresAWS[(jugadoresAWS['Name'] == name) & (jugadoresAWS['Season'] == season)]
+        df = df.sort_values(by=['FechaOrd'])
         df['AWS_MEDIO'] = df['AWS'].rolling(100, min_periods = 1).mean()
-        df = df[["ID Partido", "Local", "AWS_MEDIO"]]
+        df = df[["Name", "ID Partido", "Local", "AWS_MEDIO"]]
         df['AWS_MEDIO'] = df['AWS_MEDIO'].shift(periods=1, fill_value=0)
+        # IDEA, problema con el orden de los partidos?
+        # if(len(df[df["ID Partido"] == "/boxscores/201610250CLE.html"]) > 0):
+        #     print(df[df["ID Partido"] == "/boxscores/201610250CLE.html"])
+        # if (name == "Liggins,DeAndre" and season == 2017):  
+        #     print(df) 
         li.append(df)
     
 df_1 = pd.concat(li, axis=0, ignore_index=True)
-df_1 = df_1.groupby(['ID Partido', 'Local'], as_index = False).agg({"AWS_MEDIO": "mean"})
+df_1 = df_1.groupby(['ID Partido', 'Local'], as_index = False).mean()
 
 df_1.rename(columns = {"AWS_MEDIO": "AWS_MEDIO_AGRUPADO"}, inplace = True)
 
@@ -259,6 +272,9 @@ df_1_visitante.rename(columns = {"AWS_MEDIO_AGRUPADO": "VISITOR_AWS_MEDIO_AGRUPA
 df_1_visitante = df_1_visitante.drop(columns=['Local'])
 
 df_joined = df_1_local.merge(df_1_visitante, on = "ID Partido", how = "left")
+
+#df_joined.to_csv("agrupado_unido.csv", header=True, index=False)
+
 
 Resultados_clasificacion_final = Resultados_clasificacion_final.merge(df_joined, on = "ID Partido", how = "left" )
 
