@@ -2,6 +2,16 @@ local_dif_between_previous_game: días que han pasado desde que el local jugó su 
 visitor_dif_between_previous_game: días que han pasado desde que el visitante jugó su último partido
 local_played_previous_date: indica si el local jugó el día anterior
 visitor_played_previous_date: indica si el visitante jugó el día anterior
+local_played_prorrogue_previous_date: indica si el local jugó el día anterior prórroga
+visitor_played_prorrogue_previous_date: indica si el visitante jugó el día anterior prórroga
+local_played_two_days_ago: indica si el local jugó dos días antes
+visitor_played_two_days_ago: indica si el visitante jugó dos días antes
+local_played_prorrogue_three_days_ago: indica si el local jugó tres días antes prórroga
+visitor_played_prorrogue_three_days_ago: indica si el visitante jugó tres días antes prórroga
+local_played_three_days_ago: indica si el local jugó tres días antes
+visitor_played_three_days_ago: indica si el visitante jugó tres días antes
+local_played_prorrogue_three_days_ago: indica si el local jugó tres días antes prórroga
+visitor_played_prorrogue_three_days_ago: indica si el visitante jugó tres días antes prórroga
 local_played_local: indica los partidos seguidos que el local lleva jugando como local
 local_played_visitor: indica los partidos seguidos que el local lleva jugando como visitante
 visitor_played_visitor: indica los partidos seguidos que el visitante lleva jugando como visitante
