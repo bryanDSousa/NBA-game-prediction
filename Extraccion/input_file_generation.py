@@ -279,7 +279,7 @@ Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == 0
 Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == 1, 'Result'] = 0
 
 ############### WP 
-
+#TODO REVISAR
 partidos = Resultados_clasificacion_final.drop_duplicates()
 partidos = partidos.dropna()
 # Modificamos el formato de algunas variables 
@@ -485,7 +485,6 @@ jugadores_WP_df_jugador['WP_team'] = var[0]['3FGM_opp'] * jugadores_WP_df_jugado
 
 jugadores_WP_df_jugador['WP_adj'] = jugadores_WP_df_jugador['WP'] + jugadores_WP_df_jugador['WP_team']
 
-print(jugadores_WP_df_jugador["Season"].dtypes)
 
 ############### WP MEDIO AGRUPADO 
 li = []
@@ -521,5 +520,314 @@ df_joined = df_1_local.merge(df_1_visitante, on = "ID Partido", how = "left")
 #################
 
 Resultados_clasificacion_final = Resultados_clasificacion_final.merge(df_joined, on = "ID Partido", how = "left" )
+
+#Resultados_clasificacion LEER DE NUEVO
+path='partidos_V3_30_04_20'
+names_list = os.listdir(path)
+li = []
+
+for name in names_list:
+    df = pd.read_csv(path+"/"+name)
+    li.append(df)
+
+Resultados_clasificacion = pd.concat(li, axis=0, ignore_index=True)
+Resultados_clasificacion = Resultados_clasificacion.drop(['Season'], axis=1)
+Resultados_clasificacion.rename( columns = {
+                                "boxcore_url": "ID Partido",
+                                "Year_x": "Year", 
+                                "Season_x": "Season"},  
+                                inplace = True)  
+                                
+li = []
+seasons = np.arange(2016,2021,1)
+teamList = Resultados_clasificacion['local_team'].unique()
+#sacar campo fecha y ordenar
+Resultados_clasificacion["FechaOrd"] = Resultados_clasificacion["ID Partido"].str.slice(11, 19)
+
+variables_local = [
+"ID Partido",
+"FechaOrd",
+"local_team",
+"local_fg", 
+"local_fga", 
+"local_fg_pct", 
+"local_fg3", 
+"local_fg3a", 
+"local_fg3_pct", 
+"local_ft", 
+"local_fta", 
+"local_ft_pct", 
+"local_orb", 
+"local_drb", 
+"local_trn", 
+"local_ast", 
+"local_stl", 
+"local_blk", 
+"local_tov", 
+"local_pf", 
+"local_pts", 
+"local_true_shooting_pct", 
+"local_effective_fg_pct", 
+"local_3pa_rate", 
+"local_fta_rate", 
+"local_orb_pct", 
+"local_drb_pct", 
+"local_trb_pct", 
+"local_ast_pct", 
+"local_stl_pct", 
+"local_blk_pct", 
+"local_tov_pct", 
+"local_off_rate", 
+"local_def_rate"]
+
+variables_visitante = [
+"ID Partido",
+"FechaOrd",
+"visitor_team",    
+"visitor_fg", 
+"visitor_fga", 
+"visitor_fg_pct", 
+"visitor_fg3", 
+"visitor_fg3a", 
+"visitor_fg3_pct", 
+"visitor_ft", 
+"visitor_fta", 
+"visitor_ft_pct", 
+"visitor_orb", 
+"visitor_drb", 
+"visitor_trn", 
+"visitor_ast", 
+"visitor_stl", 
+"visitor_blk", 
+"visitor_tov", 
+"visitor_pf", 
+"visitor_pts", 
+"visitor_true_shooting_pct", 
+"visitor_effective_fg_pct", 
+"visitor_3pa_rate", 
+"visitor_fta_rate", 
+"visitor_orb_pct", 
+"visitor_drb_pct", 
+"visitor_trb_pct", 
+"visitor_ast_pct", 
+"visitor_stl_pct", 
+"visitor_blk_pct", 
+"visitor_tov_pct", 
+"visitor_off_rate", 
+"visitor_def_rate"]
+
+variables = [
+"fg", 
+"fga", 
+"fg_pct", 
+"fg3", 
+"fg3a", 
+"fg3_pct", 
+"ft", 
+"fta", 
+"ft_pct", 
+"orb", 
+"drb", 
+"trn", 
+"ast", 
+"stl", 
+"blk", 
+"tov", 
+"pf", 
+"pts", 
+"true_shooting_pct", 
+"effective_fg_pct", 
+"3pa_rate", 
+"fta_rate", 
+"orb_pct", 
+"drb_pct", 
+"trb_pct", 
+"ast_pct", 
+"stl_pct", 
+"blk_pct", 
+"tov_pct", 
+"off_rate", 
+"def_rate"]
+
+for season in seasons:
+    for team in teamList:
+        df_local = Resultados_clasificacion[(Resultados_clasificacion['local_team'] == team) & (Resultados_clasificacion['Season'] == int(season))]
+        df_local = df_local[variables_local]
+        df_local = df_local.rename(columns=lambda x: x.replace('local_', ''))
+
+        #tranformar las variables. 1º quitar las visitor y 2º renombrar sin prefijo local
+        df_visitor = Resultados_clasificacion[(Resultados_clasificacion['visitor_team'] == team) & (Resultados_clasificacion['Season'] == int(season))]
+        df_visitor = df_visitor[variables_visitante]
+        df_visitor = df_visitor.rename(columns=lambda x: x.replace('visitor_', ''))
+
+        #tranformar las variables. 1º quitar las local y 2º renombrar sin prefijo visitor
+
+        df = df_local.append(df_visitor)
+        df = df.sort_values(by=['FechaOrd'])
+        df = df.drop_duplicates(subset = "ID Partido")
+        for variable in variables:
+            df[variable+"_MEDIO"] = df[variable].rolling(100, min_periods = 1).mean()
+            df[variable+"_MEDIO"] = df[variable].shift(periods=1, fill_value=0)
+
+        li.append(df)
+    
+df_1 = pd.concat(li, axis=0, ignore_index=True)
+
+#rename con el diccionario de codigo-equipo si codigo en ID partido rename a LOCAL, si no, rename a visitante 
+#df['color'] = np.where(df['Set']=='Z', 'green', 'red')
+mapaEquipos = {
+"Philadelphia 76ers": 		"PHI",
+"Detroit Pistons":			"DET",
+"Chicago Bulls":			"CHI",
+"Minnesota Timberwolves":	"MIN",
+"New York Knicks":			"NYK",
+"Denver Nuggets":			"DEN",
+"Golden State Warriors":	"GSW",
+"Dallas Mavericks":			"DAL",
+"New Jersey Nets":			"NJN",
+"Charlotte Bobcats":		"CHA",
+"Memphis Grizzlies":		"MEM",
+"San Antonio Spurs":		"SAS",
+"New Orleans Hornets":		"NOH",
+"Oklahoma City Thunder":	"OKC",
+"Orlando Magic":			"ORL",
+"Washington Wizards":		"WAS",
+"Cleveland Cavaliers":		"CLE",
+"Boston Celtics":			"BOS",
+"Portland Trail Blazers":	"POR",
+"Los Angeles Lakers":		"LAL",
+"Sacramento Kings":			"SAC",
+"Indiana Pacers":			"IND",
+"Phoenix Suns":				"PHO",
+"Utah Jazz":				"UTA",
+"Houston Rockets":			"HOU",
+"Toronto Raptors":			"TOR",
+"Miami Heat":				"MIA",
+"Los Angeles Clippers":		"LAC",
+"Atlanta Hawks":			"ATL",
+"Milwaukee Bucks": 			"MIL",
+"Brooklyn Nets":			"BRK",
+"New Orleans Pelicans": 	"NOP",
+"Charlotte Hornets":		"CHO"
+}
+
+df_1['team'] = df_1['team'].map(mapaEquipos)
+df_1['Local'] = np.where(df_1['ID Partido'].str.slice(20, 23) == df_1['team'], True, False)
+
+df_1_local = df_1[df_1['Local'] == True]
+df_1_local = df_1_local.drop_duplicates()
+
+df_1_visitante = df_1[df_1['Local'] == True]
+df_1_visitante = df_1_visitante.drop_duplicates()
+
+columnas = ["ID Partido", 
+"fg_MEDIO", 
+"fga_MEDIO", 
+"fg_pct_MEDIO", 
+"fg3_MEDIO", 
+"fg3a_MEDIO", 
+"fg3_pct_MEDIO", 
+"ft_MEDIO", 
+"fta_MEDIO", 
+"ft_pct_MEDIO", 
+"orb_MEDIO", 
+"drb_MEDIO", 
+"trn_MEDIO", 
+"ast_MEDIO", 
+"stl_MEDIO", 
+"blk_MEDIO", 
+"tov_MEDIO", 
+"pf_MEDIO", 
+"pts_MEDIO", 
+"true_shooting_pct_MEDIO", 
+"effective_fg_pct_MEDIO", 
+"3pa_rate_MEDIO", 
+"fta_rate_MEDIO", 
+"orb_pct_MEDIO", 
+"drb_pct_MEDIO", 
+"trb_pct_MEDIO", 
+"ast_pct_MEDIO", 
+"stl_pct_MEDIO", 
+"blk_pct_MEDIO", 
+"tov_pct_MEDIO", 
+"off_rate_MEDIO", 
+"def_rate_MEDIO"
+]
+
+df_1_local = df_1_local[columnas]
+df_1_visitante = df_1_visitante[columnas]
+
+#RENAME
+df_1_local.rename( columns = {"fg_MEDIO": "local_fg_MEDIO",
+                            "fga_MEDIO": "local_fga_MEDIO",
+                            "fg_pct_MEDIO": "local_fg_pct_MEDIO",
+                            "fg3_MEDIO": "local_fg3_MEDIO",
+                            "fg3a_MEDIO": "local_fg3a_MEDIO",
+                            "fg3_pct_MEDIO": "local_fg3_pct_MEDIO",
+                            "ft_MEDIO": "local_ft_MEDIO",
+                            "fta_MEDIO": "local_fta_MEDIO",
+                            "ft_pct_MEDIO": "local_ft_pct_MEDIO",
+                            "orb_MEDIO": "local_orb_MEDIO",
+                            "drb_MEDIO": "local_drb_MEDIO",
+                            "trn_MEDIO": "local_trn_MEDIO",
+                            "ast_MEDIO": "local_ast_MEDIO",
+                            "stl_MEDIO": "local_stl_MEDIO",
+                            "blk_MEDIO": "local_blk_MEDIO",
+                            "tov_MEDIO": "local_tov_MEDIO",
+                            "pf_MEDIO": "local_pf_MEDIO",
+                            "pts_MEDIO": "local_pts_MEDIO",
+                            "true_shooting_pct_MEDIO": "local_true_shooting_pct_MEDIO",
+                            "effective_fg_pct_MEDIO": "local_effective_fg_pct_MEDIO",
+                            "3pa_rate_MEDIO": "local_3pa_rate_MEDIO",
+                            "fta_rate_MEDIO": "local_fta_rate_MEDIO",
+                            "orb_pct_MEDIO": "local_orb_pct_MEDIO",
+                            "drb_pct_MEDIO": "local_drb_pct_MEDIO",
+                            "trb_pct_MEDIO": "local_trb_pct_MEDIO",
+                            "ast_pct_MEDIO": "local_ast_pct_MEDIO",
+                            "stl_pct_MEDIO": "local_stl_pct_MEDIO",
+                            "blk_pct_MEDIO": "local_blk_pct_MEDIO",
+                            "tov_pct_MEDIO": "local_tov_pct_MEDIO",
+                            "off_rate_MEDIO": "local_off_rate_MEDIO",
+                            "def_rate_MEDIO": "local_def_rate_MEDIO"
+                            },  
+                            inplace = True) 
+df_1_visitante.rename( columns = {"fg_MEDIO": "visitor_fg_MEDIO",
+                            "fga_MEDIO": "visitor_fga_MEDIO",
+                            "fg_pct_MEDIO": "visitor_fg_pct_MEDIO",
+                            "fg3_MEDIO": "visitor_fg3_MEDIO",
+                            "fg3a_MEDIO": "visitor_fg3a_MEDIO",
+                            "fg3_pct_MEDIO": "visitor_fg3_pct_MEDIO",
+                            "ft_MEDIO": "visitor_ft_MEDIO",
+                            "fta_MEDIO": "visitor_fta_MEDIO",
+                            "ft_pct_MEDIO": "visitor_ft_pct_MEDIO",
+                            "orb_MEDIO": "visitor_orb_MEDIO",
+                            "drb_MEDIO": "visitor_drb_MEDIO",
+                            "trn_MEDIO": "visitor_trn_MEDIO",
+                            "ast_MEDIO": "visitor_ast_MEDIO",
+                            "stl_MEDIO": "visitor_stl_MEDIO",
+                            "blk_MEDIO": "visitor_blk_MEDIO",
+                            "tov_MEDIO": "visitor_tov_MEDIO",
+                            "pf_MEDIO": "visitor_pf_MEDIO",
+                            "pts_MEDIO": "visitor_pts_MEDIO",
+                            "true_shooting_pct_MEDIO": "visitor_true_shooting_pct_MEDIO",
+                            "effective_fg_pct_MEDIO": "visitor_effective_fg_pct_MEDIO",
+                            "3pa_rate_MEDIO": "visitor_3pa_rate_MEDIO",
+                            "fta_rate_MEDIO": "visitor_fta_rate_MEDIO",
+                            "orb_pct_MEDIO": "visitor_orb_pct_MEDIO",
+                            "drb_pct_MEDIO": "visitor_drb_pct_MEDIO",
+                            "trb_pct_MEDIO": "visitor_trb_pct_MEDIO",
+                            "ast_pct_MEDIO": "visitor_ast_pct_MEDIO",
+                            "stl_pct_MEDIO": "visitor_stl_pct_MEDIO",
+                            "blk_pct_MEDIO": "visitor_blk_pct_MEDIO",
+                            "tov_pct_MEDIO": "visitor_tov_pct_MEDIO",
+                            "off_rate_MEDIO": "visitor_off_rate_MEDIO",
+                            "def_rate_MEDIO": "visitor_def_rate_MEDIO"
+                            },  
+                            inplace = True) 
+#JOIN
+df_1_joined = df_1_local.merge(df_1_visitante, on = "ID Partido", how = "left" )
+
+Resultados_clasificacion_final = Resultados_clasificacion_final.merge(df_1_joined, on = "ID Partido", how = "left" )
+Resultados_clasificacion_final = Resultados_clasificacion_final.drop_duplicates()
 
 Resultados_clasificacion_final.to_csv("input.csv", header=True, index=False)
