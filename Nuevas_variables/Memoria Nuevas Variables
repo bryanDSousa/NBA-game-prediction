@@ -1,0 +1,7 @@
+# Nuevas Variables
+
+Con la obtención de las nuevas variables se pretende obtener nuevas variables que sirvan como input de los modelos predictivos posteriores.
+
+##Nuevas variables jugador
+
+En un primer lugar se intenta obtener variables a partir del archivo stats_jugadores.csv. Este archivo consta de las siguientes variables:
