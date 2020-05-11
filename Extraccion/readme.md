@@ -93,6 +93,7 @@ Realiza una serie de llamadas a www.shrpsports.com para obtener la clasificació
 
 **4.	DNP.py:**  
 Recoge los jugadores que no jugaron en el cada partido. Se realizan llamadas para obtener el calendario y después llamadas para obtener el boxscore de cada partido. Se recoge el nombre y el equipo del jugador que no jugó, así como el ID de partido. Esta información servirá para crear una variable true/false en el DataFrame que usemos como entrada del modelo de predicción que indique si el jugador estrella participó en el encuentro. 
+
  
 **5.	Premios.py:**   
 Recoge los jugadores que han recibido votos para recibir el premio MVP (premio a mejor jugador del año) desde 2010 hasta 2020. Se registra el nombre del jugador, el número de votos en primera posición, los puntos obtenidos, los puntos máximos y el share de éstos. Esta información nos servirá para actuar como contraste al análisis de las estadísticas individuales.  
