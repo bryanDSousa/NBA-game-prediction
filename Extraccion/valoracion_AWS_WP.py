@@ -20,9 +20,9 @@ for season in seasons:
     maximo = len(df_Premios)
     df_Premios = df_Premios.head(maximo)
     df_Premios["Posicion"] = np.arange(1,maximo + 1,1)
-    df_Premios = df_Premios[["Posicion", "nombre", "año", "primero"]]
+    df_Premios = df_Premios[["Posicion", "nombre", "primero"]]
     #"nombre": "premios"
-    df_Premios.rename(columns = {"nombre": "Premios", "año": "Season"}, inplace = True)
+    df_Premios.rename(columns = {"nombre": "Premios"}, inplace = True)
 
     df_AWS = AWS[AWS["Season"] == season ]
     df_AWS = df_AWS.sort_values(by=['AWS_MEAN'], ascending = False)
@@ -39,7 +39,7 @@ for season in seasons:
     df_WP = df_WP.sort_values(by=['WP_MEAN'], ascending = False)
     df_WP = df_WP.head(30)
     df_WP["Posicion"] = np.arange(1,30 + 1,1)
-    df_WP = df_WP[["Posicion", "Name"]]
+    df_WP = df_WP[["Posicion", "Name", "Season"]]
     #"Name": "WP"
     df_WP.rename(columns = {"Name": "WP"}, inplace = True)
     df_joined = df_joined.merge(df_WP, on = "Posicion", how = "right")
