@@ -102,6 +102,7 @@ Mediante llamadas a www.geodatos.net obtenemos las distancias entre las ciudades
 
 **7.	Evolucion.py:**  
 Obtendrá estadísticas totales de cada equipo en cada temporada para realizar un análisis sobre la evolución en el baloncesto NBA desde 1990 hasta 2020. La fuente de estos datos es www.basketball-reference.com. 
+
     * FG: Tiros de campos anotados
     * FGA: Tiros de campo intentados
     * FG%: Porcentaje de tiros de campo
