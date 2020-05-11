@@ -36,7 +36,7 @@ for year in years:
             pts_Won=r.text.split(sep_tables)[i].split(sep_player)[j].split(sep_points)[1].split("<")[0]
             pts_Max=r.text.split(sep_tables)[i].split(sep_player)[j].split(sep_points_max)[1].split("<")[0]
             share=r.text.split(sep_tables)[i].split(sep_player)[j].split(sep_share)[1].split("<")[0]
-            award="Most Valuable Player"
+            award=list_awards[i]
             clavejoin = name.split(",")[1]+name.split(",")[0]
             clavejoin = clavejoin.replace(" ", "").replace("-", "").replace(".","").\
                                  replace("III", "").replace("II", "").replace("IV","").replace("Jr","").\

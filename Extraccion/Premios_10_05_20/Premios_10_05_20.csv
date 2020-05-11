@@ -1,0 +1,842 @@
+nombre,primero,puntos,puntos_maximos,share,award,año,Clave Join
+"James,LeBron",116.0,1205.0,1230,0.980,Most Valuable Player,2010,LeBronJames
+"Durant,Kevin",4.0,609.0,1230,0.495,Most Valuable Player,2010,KevinDurant
+"Bryant,Kobe",0.0,599.0,1230,0.487,Most Valuable Player,2010,KobeBryant
+"Howard,Dwight",3.0,478.0,1230,0.389,Most Valuable Player,2010,DwightHoward
+"Wade,Dwyane",0.0,119.0,1230,0.097,Most Valuable Player,2010,DwyaneWade
+"Anthony,Carmelo",0.0,65.0,1230,0.053,Most Valuable Player,2010,CarmeloAnthony
+"Nowitzki,Dirk",0.0,55.0,1230,0.045,Most Valuable Player,2010,DirkNowitzki
+"Nash,Steve",0.0,49.0,1230,0.040,Most Valuable Player,2010,SteveNash
+"Williams,Deron",0.0,7.0,1230,0.006,Most Valuable Player,2010,DeronWilliams
+"Stoudemire,Amar'e",0.0,5.0,1230,0.004,Most Valuable Player,2010,AmareStoudemire
+"Ginóbili,Manu",0.0,3.0,1230,0.002,Most Valuable Player,2010,ManuGinobili
+"Billups,Chauncey",0.0,1.0,1230,0.001,Most Valuable Player,2010,ChaunceyBillups
+"Bosh,Chris",0.0,1.0,1230,0.001,Most Valuable Player,2010,ChrisBosh
+"Jackson,Stephen",0.0,1.0,1230,0.001,Most Valuable Player,2010,StephenJackson
+"Johnson,Joe",0.0,1.0,1230,0.001,Most Valuable Player,2010,JoeJohnson
+"Evans,Tyreke",67.0,491.0,615,0.798,Rookie of the Year,2010,TyrekeEvans
+"Curry,Stephen",43.0,391.0,615,0.636,Rookie of the Year,2010,StephenCurry
+"Jennings,Brandon",12.0,204.0,615,0.332,Rookie of the Year,2010,BrandonJennings
+"Collison,Darren",1.0,17.0,615,0.028,Rookie of the Year,2010,DarrenCollison
+"Flynn,Jonny",0.0,2.0,615,0.003,Rookie of the Year,2010,JonnyFlynn
+"Gibson,Taj",0.0,2.0,615,0.003,Rookie of the Year,2010,TajGibson
+"Howard,Dwight",110.0,576.0,610,0.944,Defensive Player of the Year,2010,DwightHoward
+"Smith,Josh",3.0,136.0,610,0.223,Defensive Player of the Year,2010,JoshSmith
+"Wallace,Gerald",1.0,113.0,610,0.185,Defensive Player of the Year,2010,GeraldWallace
+"James,LeBron",4.0,61.0,610,0.100,Defensive Player of the Year,2010,LeBronJames
+"Rondo,Rajon",1.0,55.0,610,0.090,Defensive Player of the Year,2010,RajonRondo
+"World Peace,Metta",0.0,29.0,610,0.048,Defensive Player of the Year,2010,MettaWorldPeace
+"Bogut,Andrew",1.0,23.0,610,0.038,Defensive Player of the Year,2010,AndrewBogut
+"Sefolosha,Thabo",2.0,20.0,610,0.033,Defensive Player of the Year,2010,ThaboSefolosha
+"Varejão,Anderson",0.0,18.0,610,0.030,Defensive Player of the Year,2010,AndersonVarejao
+"Camby,Marcus",0.0,13.0,610,0.021,Defensive Player of the Year,2010,MarcusCamby
+"Wade,Dwyane",0.0,13.0,610,0.021,Defensive Player of the Year,2010,DwyaneWade
+"Bryant,Kobe",0.0,9.0,610,0.015,Defensive Player of the Year,2010,KobeBryant
+"Marion,Shawn",0.0,8.0,610,0.013,Defensive Player of the Year,2010,ShawnMarion
+"Duncan,Tim",0.0,7.0,610,0.011,Defensive Player of the Year,2010,TimDuncan
+"Battier,Shane",0.0,5.0,610,0.008,Defensive Player of the Year,2010,ShaneBattier
+"Kirilenko,Andrei",0.0,4.0,610,0.007,Defensive Player of the Year,2010,AndreiKirilenko
+"Afflalo,Arron",0.0,1.0,610,0.002,Defensive Player of the Year,2010,ArronAfflalo
+"Barnes,Matt",0.0,1.0,610,0.002,Defensive Player of the Year,2010,MattBarnes
+"Haywood,Brendan",0.0,1.0,610,0.002,Defensive Player of the Year,2010,BrendanHaywood
+"Lee,David",0.0,1.0,610,0.002,Defensive Player of the Year,2010,DavidLee
+"Martin,Kenyon",0.0,1.0,610,0.002,Defensive Player of the Year,2010,KenyonMartin
+"Mbah a Moute,Luc",0.0,1.0,610,0.002,Defensive Player of the Year,2010,LucMbahaMoute
+"Perkins,Kendrick",0.0,1.0,610,0.002,Defensive Player of the Year,2010,KendrickPerkins
+"Wallace,Ben",0.0,1.0,610,0.002,Defensive Player of the Year,2010,BenWallace
+"Crawford,Jamal",110.0,580.0,610,0.951,Sixth Man of the Year,2010,JamalCrawford
+"Terry,Jason",6.0,220.0,610,0.361,Sixth Man of the Year,2010,JasonTerry
+"Varejão,Anderson",2.0,126.0,610,0.207,Sixth Man of the Year,2010,AndersonVarejao
+"Ginóbili,Manu",2.0,75.0,610,0.123,Sixth Man of the Year,2010,ManuGinobili
+"Smith,J.R.",0.0,33.0,610,0.054,Sixth Man of the Year,2010,JRSmith
+"Odom,Lamar",1.0,25.0,610,0.041,Sixth Man of the Year,2010,LamarOdom
+"Millsap,Paul",1.0,15.0,610,0.025,Sixth Man of the Year,2010,PaulMillsap
+"Landry,Carl",0.0,12.0,610,0.020,Sixth Man of the Year,2010,CarlLandry
+"Haslem,Udonis",0.0,5.0,610,0.008,Sixth Man of the Year,2010,UdonisHaslem
+"Thornton,Marcus",0.0,3.0,610,0.005,Sixth Man of the Year,2010,MarcusThornton
+"Dudley,Jared",0.0,1.0,610,0.002,Sixth Man of the Year,2010,JaredDudley
+"Harrington,Al",0.0,1.0,610,0.002,Sixth Man of the Year,2010,AlHarrington
+"Love,Kevin",0.0,1.0,610,0.002,Sixth Man of the Year,2010,KevinLove
+"Lowry,Kyle",0.0,1.0,610,0.002,Sixth Man of the Year,2010,KyleLowry
+"Brooks,Aaron",62.0,403.0,615,0.655,Most Improved Player,2010,AaronBrooks
+"Durant,Kevin",17.0,101.0,615,0.164,Most Improved Player,2010,KevinDurant
+"Gasol,Marc",9.0,101.0,615,0.164,Most Improved Player,2010,MarcGasol
+"Hill,George",7.0,101.0,615,0.164,Most Improved Player,2010,GeorgeHill
+"Bogut,Andrew",7.0,93.0,615,0.151,Most Improved Player,2010,AndrewBogut
+"Westbrook,Russell",5.0,67.0,615,0.109,Most Improved Player,2010,RussellWestbrook
+"Noah,Joakim",7.0,64.0,615,0.104,Most Improved Player,2010,JoakimNoah
+"Wallace,Gerald",3.0,29.0,615,0.047,Most Improved Player,2010,GeraldWallace
+"Lopez,Brook",1.0,19.0,615,0.031,Most Improved Player,2010,BrookLopez
+"Brewer,Corey",0.0,19.0,615,0.031,Most Improved Player,2010,CoreyBrewer
+"Landry,Carl",0.0,18.0,615,0.029,Most Improved Player,2010,CarlLandry
+"Rondo,Rajon",2.0,12.0,615,0.020,Most Improved Player,2010,RajonRondo
+"Blatche,Andray",1.0,12.0,615,0.020,Most Improved Player,2010,AndrayBlatche
+"Frye,Channing",1.0,10.0,615,0.016,Most Improved Player,2010,ChanningFrye
+"Gallinari,Danilo",0.0,10.0,615,0.016,Most Improved Player,2010,DaniloGallinari
+"Smith,Josh",0.0,8.0,615,0.013,Most Improved Player,2010,JoshSmith
+"Lee,David",0.0,7.0,615,0.011,Most Improved Player,2010,DavidLee
+"Howard,Dwight",1.0,5.0,615,0.008,Most Improved Player,2010,DwightHoward
+"İlyasova,Ersan",0.0,4.0,615,0.007,Most Improved Player,2010,ErsanIlyasova
+"Kaman,Chris",0.0,4.0,615,0.007,Most Improved Player,2010,ChrisKaman
+"Redick,J.J.",0.0,4.0,615,0.007,Most Improved Player,2010,JJRedick
+"Douglas-Roberts,Chris",0.0,3.0,615,0.005,Most Improved Player,2010,ChrisDouglasRoberts
+"Hilário,Nenê",0.0,3.0,615,0.005,Most Improved Player,2010,NeneHilario
+"Millsap,Paul",0.0,3.0,615,0.005,Most Improved Player,2010,PaulMillsap
+"Lopez,Robin",0.0,2.0,615,0.003,Most Improved Player,2010,RobinLopez
+"Ellis,Monta",0.0,1.0,615,0.002,Most Improved Player,2010,MontaEllis
+"Hickson,J.J.",0.0,1.0,615,0.002,Most Improved Player,2010,JJHickson
+"Randolph,Zach",0.0,1.0,615,0.002,Most Improved Player,2010,ZachRandolph
+"Salmons,John",0.0,1.0,615,0.002,Most Improved Player,2010,JohnSalmons
+"Wallace,Ben",0.0,1.0,615,0.002,Most Improved Player,2010,BenWallace
+"Rose,Derrick",113.0,1182.0,1210,0.977,Most Valuable Player,2011,DerrickRose
+"Howard,Dwight",3.0,643.0,1210,0.531,Most Valuable Player,2011,DwightHoward
+"James,LeBron",4.0,522.0,1210,0.431,Most Valuable Player,2011,LeBronJames
+"Bryant,Kobe",1.0,428.0,1210,0.354,Most Valuable Player,2011,KobeBryant
+"Durant,Kevin",0.0,190.0,1210,0.157,Most Valuable Player,2011,KevinDurant
+"Nowitzki,Dirk",0.0,113.0,1210,0.093,Most Valuable Player,2011,DirkNowitzki
+"Wade,Dwyane",0.0,24.0,1210,0.020,Most Valuable Player,2011,DwyaneWade
+"Gin�bili,Manu",0.0,20.0,1210,0.017,Most Valuable Player,2011,ManuGinbili
+"Stoudemire,Amar'e",0.0,9.0,1210,0.007,Most Valuable Player,2011,AmareStoudemire
+"Griffin,Blake",0.0,5.0,1210,0.004,Most Valuable Player,2011,BlakeGriffin
+"Rondo,Rajon",0.0,5.0,1210,0.004,Most Valuable Player,2011,RajonRondo
+"Parker,Tony",0.0,3.0,1210,0.002,Most Valuable Player,2011,TonyParker
+"Paul,Chris",0.0,2.0,1210,0.002,Most Valuable Player,2011,ChrisPaul
+"Griffin,Blake",118.0,590.0,590,1.000,Rookie of the Year,2011,BlakeGriffin
+"Wall,John",0.0,295.0,590,0.500,Rookie of the Year,2011,JohnWall
+"Cousins,DeMarcus",0.0,81.0,590,0.137,Rookie of the Year,2011,DeMarcusCousins
+"Fields,Landry",0.0,62.0,590,0.105,Rookie of the Year,2011,LandryFields
+"Neal,Gary",0.0,19.0,590,0.032,Rookie of the Year,2011,GaryNeal
+"Monroe,Greg",0.0,15.0,590,0.025,Rookie of the Year,2011,GregMonroe
+"Howard,Dwight",114.0,585.0,600,0.975,Defensive Player of the Year,2011,DwightHoward
+"Garnett,Kevin",1.0,77.0,600,0.128,Defensive Player of the Year,2011,KevinGarnett
+"Chandler,Tyson",0.0,70.0,600,0.117,Defensive Player of the Year,2011,TysonChandler
+"Allen,Tony",0.0,53.0,600,0.088,Defensive Player of the Year,2011,TonyAllen
+"Rondo,Rajon",0.0,45.0,600,0.075,Defensive Player of the Year,2011,RajonRondo
+"Bogut,Andrew",0.0,32.0,600,0.053,Defensive Player of the Year,2011,AndrewBogut
+"Hill,Grant",1.0,30.0,600,0.050,Defensive Player of the Year,2011,GrantHill
+"Iguodala,Andre",0.0,29.0,600,0.048,Defensive Player of the Year,2011,AndreIguodala
+"James,LeBron",0.0,25.0,600,0.042,Defensive Player of the Year,2011,LeBronJames
+"Deng,Luol",0.0,24.0,600,0.040,Defensive Player of the Year,2011,LuolDeng
+"Bryant,Kobe",0.0,18.0,600,0.030,Defensive Player of the Year,2011,KobeBryant
+"Hayes,Chuck",2.0,13.0,600,0.022,Defensive Player of the Year,2011,ChuckHayes
+"Paul,Chris",0.0,13.0,600,0.022,Defensive Player of the Year,2011,ChrisPaul
+"Ibaka,Serge",0.0,12.0,600,0.020,Defensive Player of the Year,2011,SergeIbaka
+"Noah,Joakim",1.0,11.0,600,0.018,Defensive Player of the Year,2011,JoakimNoah
+"Wade,Dwyane",0.0,8.0,600,0.013,Defensive Player of the Year,2011,DwyaneWade
+"Duncan,Tim",0.0,7.0,600,0.012,Defensive Player of the Year,2011,TimDuncan
+"World Peace,Metta",0.0,6.0,600,0.010,Defensive Player of the Year,2011,MettaWorldPeace
+"Bogans,Keith",1.0,5.0,600,0.008,Defensive Player of the Year,2011,KeithBogans
+"McGee,JaVale",0.0,5.0,600,0.008,Defensive Player of the Year,2011,JaValeMcGee
+"Sefolosha,Thabo",0.0,4.0,600,0.007,Defensive Player of the Year,2011,ThaboSefolosha
+"Bynum,Andrew",0.0,3.0,600,0.005,Defensive Player of the Year,2011,AndrewBynum
+"Martin,Kenyon",0.0,2.0,600,0.003,Defensive Player of the Year,2011,KenyonMartin
+"Wallace,Gerald",0.0,2.0,600,0.003,Defensive Player of the Year,2011,GeraldWallace
+"Smith,Josh",0.0,1.0,600,0.002,Defensive Player of the Year,2011,JoshSmith
+"Odom,Lamar",96.0,513.0,585,0.877,Sixth Man of the Year,2011,LamarOdom
+"Terry,Jason",13.0,244.0,585,0.417,Sixth Man of the Year,2011,JasonTerry
+"Young,Thaddeus",2.0,76.0,585,0.130,Sixth Man of the Year,2011,ThaddeusYoung
+"Davis,Glen",0.0,75.0,585,0.128,Sixth Man of the Year,2011,GlenDavis
+"Crawford,Jamal",5.0,51.0,585,0.087,Sixth Man of the Year,2011,JamalCrawford
+"Williams,Lou",1.0,26.0,585,0.044,Sixth Man of the Year,2011,LouWilliams
+"Harden,James",0.0,19.0,585,0.032,Sixth Man of the Year,2011,JamesHarden
+"Hill,George",0.0,18.0,585,0.031,Sixth Man of the Year,2011,GeorgeHill
+"Gortat,Marcin",0.0,11.0,585,0.019,Sixth Man of the Year,2011,MarcinGortat
+"Smith,J.R.",0.0,7.0,585,0.012,Sixth Man of the Year,2011,JRSmith
+"Allen,Tony",0.0,3.0,585,0.005,Sixth Man of the Year,2011,TonyAllen
+"Lawson,Ty",0.0,3.0,585,0.005,Sixth Man of the Year,2011,TyLawson
+"Mayo,O.J.",0.0,3.0,585,0.005,Sixth Man of the Year,2011,OJMayo
+"Douglas,Toney",0.0,2.0,585,0.003,Sixth Man of the Year,2011,ToneyDouglas
+"Bonner,Matt",0.0,1.0,585,0.002,Sixth Man of the Year,2011,MattBonner
+"Redick,J.J.",0.0,1.0,585,0.002,Sixth Man of the Year,2011,JJRedick
+"Love,Kevin",66.0,400.0,580,0.690,Most Improved Player,2011,KevinLove
+"Aldridge,LaMarcus",11.0,157.0,580,0.271,Most Improved Player,2011,LaMarcusAldridge
+"Wright,Dorell",16.0,124.0,580,0.214,Most Improved Player,2011,DorellWright
+"Rose,Derrick",11.0,69.0,580,0.119,Most Improved Player,2011,DerrickRose
+"Humphries,Kris",1.0,63.0,580,0.109,Most Improved Player,2011,KrisHumphries
+"Lowry,Kyle",3.0,48.0,580,0.083,Most Improved Player,2011,KyleLowry
+"Westbrook,Russell",3.0,46.0,580,0.079,Most Improved Player,2011,RussellWestbrook
+"Matthews,Wesley",2.0,32.0,580,0.055,Most Improved Player,2011,WesleyMatthews
+"Holiday,Jrue",1.0,15.0,580,0.026,Most Improved Player,2011,ueHoliday
+"Conley,Mike",0.0,14.0,580,0.024,Most Improved Player,2011,MikeConley
+"Afflalo,Arron",0.0,13.0,580,0.022,Most Improved Player,2011,ArronAfflalo
+"Hibbert,Roy",1.0,9.0,580,0.016,Most Improved Player,2011,RoyHibbert
+"DeRozan,DeMar",1.0,6.0,580,0.010,Most Improved Player,2011,DeMarDeRozan
+"Gordon,Eric",0.0,5.0,580,0.009,Most Improved Player,2011,EricGordon
+"Hansbrough,Tyler",0.0,5.0,580,0.009,Most Improved Player,2011,TylerHansbrough
+"Young,Nick",0.0,5.0,580,0.009,Most Improved Player,2011,NickYoung
+"Arthur,Darrell",0.0,4.0,580,0.007,Most Improved Player,2011,DarrellArthur
+"Ibaka,Serge",0.0,4.0,580,0.007,Most Improved Player,2011,SergeIbaka
+"Jordan,DeAndre",0.0,4.0,580,0.007,Most Improved Player,2011,DeAndreJordan
+"Young,Thaddeus",0.0,4.0,580,0.007,Most Improved Player,2011,ThaddeusYoung
+"Augustin,D.J.",0.0,3.0,580,0.005,Most Improved Player,2011,DJAugustin
+"Deng,Luol",0.0,3.0,580,0.005,Most Improved Player,2011,LuolDeng
+"Stoudemire,Amar'e",0.0,3.0,580,0.005,Most Improved Player,2011,AmareStoudemire
+"Allen,Tony",0.0,1.0,580,0.002,Most Improved Player,2011,TonyAllen
+"Beasley,Michael",0.0,1.0,580,0.002,Most Improved Player,2011,MichaelBeasley
+"Brand,Elton",0.0,1.0,580,0.002,Most Improved Player,2011,EltonBrand
+"Chandler,Tyson",0.0,1.0,580,0.002,Most Improved Player,2011,TysonChandler
+"Dudley,Jared",0.0,1.0,580,0.002,Most Improved Player,2011,JaredDudley
+"Gortat,Marcin",0.0,1.0,580,0.002,Most Improved Player,2011,MarcinGortat
+"Harden,James",0.0,1.0,580,0.002,Most Improved Player,2011,JamesHarden
+"Meeks,Jodie",0.0,1.0,580,0.002,Most Improved Player,2011,JodieMeeks
+"James,LeBron",85.0,1074.0,1210,0.888,Most Valuable Player,2012,LeBronJames
+"Durant,Kevin",24.0,889.0,1210,0.735,Most Valuable Player,2012,KevinDurant
+"Paul,Chris",6.0,385.0,1210,0.318,Most Valuable Player,2012,ChrisPaul
+"Bryant,Kobe",2.0,352.0,1210,0.291,Most Valuable Player,2012,KobeBryant
+"Parker,Tony",4.0,331.0,1210,0.274,Most Valuable Player,2012,TonyParker
+"Love,Kevin",0.0,58.0,1210,0.048,Most Valuable Player,2012,KevinLove
+"Howard,Dwight",0.0,13.0,1210,0.011,Most Valuable Player,2012,DwightHoward
+"Rondo,Rajon",0.0,12.0,1210,0.010,Most Valuable Player,2012,RajonRondo
+"Nash,Steve",0.0,7.0,1210,0.006,Most Valuable Player,2012,SteveNash
+"Wade,Dwyane",0.0,6.0,1210,0.005,Most Valuable Player,2012,DwyaneWade
+"Rose,Derrick",0.0,5.0,1210,0.004,Most Valuable Player,2012,DerrickRose
+"Nowitzki,Dirk",0.0,4.0,1210,0.003,Most Valuable Player,2012,DirkNowitzki
+"Westbrook,Russell",0.0,4.0,1210,0.003,Most Valuable Player,2012,RussellWestbrook
+"Duncan,Tim",0.0,3.0,1210,0.002,Most Valuable Player,2012,TimDuncan
+"Johnson,Joe",0.0,1.0,1210,0.001,Most Valuable Player,2012,JoeJohnson
+"Irving,Kyrie",117.0,592.0,600,0.987,Rookie of the Year,2012,KyrieIrving
+"Rubio,Ricky",0.0,170.0,600,0.283,Rookie of the Year,2012,RickyRubio
+"Faried,Kenneth",1.0,129.0,600,0.215,Rookie of the Year,2012,KennethFaried
+"Leonard,Kawhi",1.0,47.0,600,0.078,Rookie of the Year,2012,KawhiLeonard
+"Shumpert,Iman",1.0,33.0,600,0.055,Rookie of the Year,2012,ImanShumpert
+"Thompson,Klay",0.0,30.0,600,0.050,Rookie of the Year,2012,KlayThompson
+"Thomas,Isaiah",0.0,28.0,600,0.047,Rookie of the Year,2012,IsaiahThomas
+"Knight,Brandon",0.0,21.0,600,0.035,Rookie of the Year,2012,BrandonKnight
+"Parsons,Chandler",0.0,14.0,600,0.023,Rookie of the Year,2012,ChandlerParsons
+"Brooks,MarShon",0.0,4.0,600,0.007,Rookie of the Year,2012,MarShonBrooks
+"Walker,Kemba",0.0,3.0,600,0.005,Rookie of the Year,2012,KembaWalker
+"Selby,Josh",0.0,1.0,600,0.002,Rookie of the Year,2012,JoshSelby
+"Chandler,Tyson",45.0,311.0,605,0.514,Defensive Player of the Year,2012,TysonChandler
+"Ibaka,Serge",41.0,294.0,605,0.486,Defensive Player of the Year,2012,SergeIbaka
+"Howard,Dwight",18.0,186.0,605,0.307,Defensive Player of the Year,2012,DwightHoward
+"James,LeBron",7.0,112.0,605,0.185,Defensive Player of the Year,2012,LeBronJames
+"Garnett,Kevin",2.0,44.0,605,0.073,Defensive Player of the Year,2012,KevinGarnett
+"Allen,Tony",4.0,36.0,605,0.060,Defensive Player of the Year,2012,TonyAllen
+"Iguodala,Andre",1.0,33.0,605,0.055,Defensive Player of the Year,2012,AndreIguodala
+"Marion,Shawn",2.0,17.0,605,0.028,Defensive Player of the Year,2012,ShawnMarion
+"Deng,Luol",1.0,16.0,605,0.026,Defensive Player of the Year,2012,LuolDeng
+"Smith,Josh",0.0,9.0,605,0.015,Defensive Player of the Year,2012,JoshSmith
+"Noah,Joakim",0.0,6.0,605,0.010,Defensive Player of the Year,2012,JoakimNoah
+"Gasol,Marc",0.0,5.0,605,0.008,Defensive Player of the Year,2012,MarcGasol
+"Paul,Chris",0.0,5.0,605,0.008,Defensive Player of the Year,2012,ChrisPaul
+"Bradley,Avery",0.0,2.0,605,0.003,Defensive Player of the Year,2012,AveryBradley
+"Conley,Mike",0.0,2.0,605,0.003,Defensive Player of the Year,2012,MikeConley
+"Hill,Grant",0.0,2.0,605,0.003,Defensive Player of the Year,2012,GrantHill
+"Shumpert,Iman",0.0,2.0,605,0.003,Defensive Player of the Year,2012,ImanShumpert
+"Monroe,Greg",0.0,1.0,605,0.002,Defensive Player of the Year,2012,GregMonroe
+"Wade,Dwyane",0.0,1.0,605,0.002,Defensive Player of the Year,2012,DwyaneWade
+"Westbrook,Russell",0.0,1.0,605,0.002,Defensive Player of the Year,2012,RussellWestbrook
+"Harden,James",115.0,584.0,595,0.982,Sixth Man of the Year,2012,JamesHarden
+"Williams,Lou",3.0,231.0,595,0.388,Sixth Man of the Year,2012,LouWilliams
+"Terry,Jason",0.0,81.0,595,0.136,Sixth Man of the Year,2012,JasonTerry
+"Harrington,Al",0.0,42.0,595,0.071,Sixth Man of the Year,2012,AlHarrington
+"Gibson,Taj",1.0,28.0,595,0.047,Sixth Man of the Year,2012,TajGibson
+"Ginóbili,Manu",0.0,28.0,595,0.047,Sixth Man of the Year,2012,ManuGinobili
+"Mayo,O.J.",0.0,18.0,595,0.030,Sixth Man of the Year,2012,OJMayo
+"Williams,Mo",0.0,14.0,595,0.024,Sixth Man of the Year,2012,MoWilliams
+"Young,Thaddeus",0.0,10.0,595,0.017,Sixth Man of the Year,2012,ThaddeusYoung
+"Korver,Kyle",0.0,4.0,595,0.007,Sixth Man of the Year,2012,KyleKorver
+"Crawford,Jamal",0.0,3.0,595,0.005,Sixth Man of the Year,2012,JamalCrawford
+"Landry,Carl",0.0,3.0,595,0.005,Sixth Man of the Year,2012,CarlLandry
+"Randolph,Zach",0.0,3.0,595,0.005,Sixth Man of the Year,2012,ZachRandolph
+"Watson,C.J.",0.0,3.0,595,0.005,Sixth Man of the Year,2012,CJWatson
+"Dunleavy,Mike",0.0,2.0,595,0.003,Sixth Man of the Year,2012,MikeDunleavy
+"Hansbrough,Tyler",0.0,2.0,595,0.003,Sixth Man of the Year,2012,TylerHansbrough
+"Neal,Gary",0.0,2.0,595,0.003,Sixth Man of the Year,2012,GaryNeal
+"Hill,George",0.0,1.0,595,0.002,Sixth Man of the Year,2012,GeorgeHill
+"Miller,Andre",0.0,1.0,595,0.002,Sixth Man of the Year,2012,AndreMiller
+"Smith,J.R.",0.0,1.0,595,0.002,Sixth Man of the Year,2012,JRSmith
+"Anderson,Ryan",33.0,260.0,605,0.430,Most Improved Player,2012,RyanAnderson
+"İlyasova,Ersan",21.0,159.0,605,0.263,Most Improved Player,2012,ErsanIlyasova
+"Peković,Nikola",10.0,104.0,605,0.172,Most Improved Player,2012,NikolaPekovic
+"Bynum,Andrew",14.0,101.0,605,0.167,Most Improved Player,2012,AndrewBynum
+"Monroe,Greg",10.0,96.0,605,0.159,Most Improved Player,2012,GregMonroe
+"Lin,Jeremy",10.0,91.0,605,0.150,Most Improved Player,2012,JeremyLin
+"Dragić,Goran",4.0,54.0,605,0.089,Most Improved Player,2012,GoranDragic
+"Bradley,Avery",4.0,36.0,605,0.060,Most Improved Player,2012,AveryBradley
+"Green,Danny",3.0,27.0,605,0.045,Most Improved Player,2012,DannyGreen
+"Teague,Jeff",1.0,27.0,605,0.045,Most Improved Player,2012,JeffTeague
+"Ibaka,Serge",2.0,16.0,605,0.026,Most Improved Player,2012,SergeIbaka
+"Lawson,Ty",1.0,16.0,605,0.026,Most Improved Player,2012,TyLawson
+"George,Paul",2.0,13.0,605,0.021,Most Improved Player,2012,PaulGeorge
+"Novak,Steve",1.0,12.0,605,0.020,Most Improved Player,2012,SteveNovak
+"Cousins,DeMarcus",0.0,11.0,605,0.018,Most Improved Player,2012,DeMarcusCousins
+"Love,Kevin",1.0,8.0,605,0.013,Most Improved Player,2012,KevinLove
+"Harden,James",0.0,7.0,605,0.012,Most Improved Player,2012,JamesHarden
+"Hibbert,Roy",0.0,7.0,605,0.012,Most Improved Player,2012,RoyHibbert
+"Gortat,Marcin",1.0,6.0,605,0.010,Most Improved Player,2012,MarcinGortat
+"Henderson,Gerald",1.0,6.0,605,0.010,Most Improved Player,2012,GeraldHenderson
+"Gasol,Marc",1.0,5.0,605,0.008,Most Improved Player,2012,MarcGasol
+"Lowry,Kyle",1.0,5.0,605,0.008,Most Improved Player,2012,KyleLowry
+"Hayward,Gordon",0.0,4.0,605,0.007,Most Improved Player,2012,GordonHayward
+"Afflalo,Arron",0.0,3.0,605,0.005,Most Improved Player,2012,ArronAfflalo
+"Parker,Tony",0.0,3.0,605,0.005,Most Improved Player,2012,TonyParker
+"Watson,C.J.",0.0,3.0,605,0.005,Most Improved Player,2012,CJWatson
+"Wright,Brandan",0.0,3.0,605,0.005,Most Improved Player,2012,BrandanWright
+"Jack,Jarrett",0.0,1.0,605,0.002,Most Improved Player,2012,JarrettJack
+"Speights,Marreese",0.0,1.0,605,0.002,Most Improved Player,2012,MarreeseSpeights
+"James,LeBron",120.0,1207.0,1210,0.998,Most Valuable Player,2013,LeBronJames
+"Durant,Kevin",0.0,765.0,1210,0.632,Most Valuable Player,2013,KevinDurant
+"Anthony,Carmelo",1.0,475.0,1210,0.393,Most Valuable Player,2013,CarmeloAnthony
+"Paul,Chris",0.0,289.0,1210,0.239,Most Valuable Player,2013,ChrisPaul
+"Bryant,Kobe",0.0,184.0,1210,0.152,Most Valuable Player,2013,KobeBryant
+"Parker,Tony",0.0,86.0,1210,0.071,Most Valuable Player,2013,TonyParker
+"Duncan,Tim",0.0,65.0,1210,0.054,Most Valuable Player,2013,TimDuncan
+"Harden,James",0.0,33.0,1210,0.027,Most Valuable Player,2013,JamesHarden
+"Westbrook,Russell",0.0,9.0,1210,0.007,Most Valuable Player,2013,RussellWestbrook
+"Wade,Dwyane",0.0,5.0,1210,0.004,Most Valuable Player,2013,DwyaneWade
+"Curry,Stephen",0.0,3.0,1210,0.002,Most Valuable Player,2013,StephenCurry
+"Garnett,Kevin",0.0,1.0,1210,0.001,Most Valuable Player,2013,KevinGarnett
+"Gasol,Marc",0.0,1.0,1210,0.001,Most Valuable Player,2013,MarcGasol
+"Lawson,Ty",0.0,1.0,1210,0.001,Most Valuable Player,2013,TyLawson
+"Lee,David",0.0,1.0,1210,0.001,Most Valuable Player,2013,DavidLee
+"Noah,Joakim",0.0,1.0,1210,0.001,Most Valuable Player,2013,JoakimNoah
+"Lillard,Damian",121.0,605.0,605,1.000,Rookie of the Year,2013,DamianLillard
+"Davis,Anthony",0.0,306.0,605,0.506,Rookie of the Year,2013,AnthonyDavis
+"Beal,Bradley",0.0,94.0,605,0.155,Rookie of the Year,2013,BradleyBeal
+"Drummond,Andre",0.0,36.0,605,0.060,Rookie of the Year,2013,AndreDrummond
+"Waiters,Dion",0.0,21.0,605,0.035,Rookie of the Year,2013,DionWaiters
+"Barnes,Harrison",0.0,8.0,605,0.013,Rookie of the Year,2013,HarrisonBarnes
+"Copeland,Chris",0.0,8.0,605,0.013,Rookie of the Year,2013,ChrisCopeland
+"Kidd-Gilchrist,Michael",0.0,3.0,605,0.005,Rookie of the Year,2013,MichaelKiddGilchrist
+"Valančiūnas,Jonas",0.0,2.0,605,0.003,Rookie of the Year,2013,JonasValanciunas
+"Jenkins,John",0.0,1.0,605,0.002,Rookie of the Year,2013,JohnJenkins
+"Gasol,Marc",30.0,212.0,605,0.350,Defensive Player of the Year,2013,MarcGasol
+"James,LeBron",18.0,149.0,605,0.246,Defensive Player of the Year,2013,LeBronJames
+"Ibaka,Serge",14.0,122.0,605,0.202,Defensive Player of the Year,2013,SergeIbaka
+"Noah,Joakim",13.0,107.0,605,0.177,Defensive Player of the Year,2013,JoakimNoah
+"Allen,Tony",9.0,102.0,605,0.169,Defensive Player of the Year,2013,TonyAllen
+"Duncan,Tim",11.0,94.0,605,0.155,Defensive Player of the Year,2013,TimDuncan
+"Sanders,Larry",4.0,90.0,605,0.149,Defensive Player of the Year,2013,LarrySanders
+"George,Paul",8.0,57.0,605,0.094,Defensive Player of the Year,2013,PaulGeorge
+"Iguodala,Andre",5.0,43.0,605,0.071,Defensive Player of the Year,2013,AndreIguodala
+"Hibbert,Roy",3.0,36.0,605,0.060,Defensive Player of the Year,2013,RoyHibbert
+"Paul,Chris",2.0,19.0,605,0.031,Defensive Player of the Year,2013,ChrisPaul
+"Bradley,Avery",2.0,15.0,605,0.025,Defensive Player of the Year,2013,AveryBradley
+"Chandler,Tyson",0.0,11.0,605,0.018,Defensive Player of the Year,2013,TysonChandler
+"Howard,Dwight",1.0,9.0,605,0.015,Defensive Player of the Year,2013,DwightHoward
+"Deng,Luol",1.0,6.0,605,0.010,Defensive Player of the Year,2013,LuolDeng
+"Wade,Dwyane",0.0,4.0,605,0.007,Defensive Player of the Year,2013,DwyaneWade
+"Ariza,Trevor",0.0,3.0,605,0.005,Defensive Player of the Year,2013,TrevorAriza
+"Butler,Jimmy",0.0,3.0,605,0.005,Defensive Player of the Year,2013,JimmyButler
+"Faried,Kenneth",0.0,3.0,605,0.005,Defensive Player of the Year,2013,KennethFaried
+"Westbrook,Russell",0.0,3.0,605,0.005,Defensive Player of the Year,2013,RussellWestbrook
+"Conley,Mike",0.0,1.0,605,0.002,Defensive Player of the Year,2013,MikeConley
+"Smith,J.R.",72.0,484.0,605,0.800,Sixth Man of the Year,2013,JRSmith
+"Crawford,Jamal",31.0,352.0,605,0.582,Sixth Man of the Year,2013,JamalCrawford
+"Jack,Jarrett",14.0,170.0,605,0.281,Sixth Man of the Year,2013,JarrettJack
+"Martin,Kevin",2.0,31.0,605,0.051,Sixth Man of the Year,2013,KevinMartin
+"Anderson,Ryan",1.0,11.0,605,0.018,Sixth Man of the Year,2013,RyanAnderson
+"Miller,Andre",0.0,7.0,605,0.012,Sixth Man of the Year,2013,AndreMiller
+"Crawford,Jordan",1.0,5.0,605,0.008,Sixth Man of the Year,2013,JordanCrawford
+"Brewer,Corey",0.0,4.0,605,0.007,Sixth Man of the Year,2013,CoreyBrewer
+"Ginóbili,Manu",0.0,4.0,605,0.007,Sixth Man of the Year,2013,ManuGinobili
+"Landry,Carl",0.0,4.0,605,0.007,Sixth Man of the Year,2013,CarlLandry
+"Robinson,Nate",0.0,4.0,605,0.007,Sixth Man of the Year,2013,NateRobinson
+"Battier,Shane",0.0,2.0,605,0.003,Sixth Man of the Year,2013,ShaneBattier
+"Sessions,Ramon",0.0,2.0,605,0.003,Sixth Man of the Year,2013,RamonSessions
+"Babbitt,Luke",0.0,1.0,605,0.002,Sixth Man of the Year,2013,LukeBabbitt
+"Carter,Vince",0.0,1.0,605,0.002,Sixth Man of the Year,2013,VinceCarter
+"Hayward,Gordon",0.0,1.0,605,0.002,Sixth Man of the Year,2013,GordonHayward
+"Redick,J.J.",0.0,1.0,605,0.002,Sixth Man of the Year,2013,JJRedick
+"George,Paul",52.0,311.0,600,0.518,Most Improved Player,2013,PaulGeorge
+"Vásquez,Greivis",13.0,146.0,600,0.243,Most Improved Player,2013,GreivisVasquez
+"Sanders,Larry",10.0,141.0,600,0.235,Most Improved Player,2013,LarrySanders
+"Vučević,Nikola",10.0,109.0,600,0.182,Most Improved Player,2013,NikolaVucevic
+"Holiday,Jrue",10.0,102.0,600,0.170,Most Improved Player,2013,ueHoliday
+"Aşık,Ömer",9.0,86.0,600,0.143,Most Improved Player,2013,OmerAsik
+"Harden,James",8.0,53.0,600,0.088,Most Improved Player,2013,JamesHarden
+"Curry,Stephen",1.0,18.0,600,0.030,Most Improved Player,2013,StephenCurry
+"Ibaka,Serge",1.0,15.0,600,0.025,Most Improved Player,2013,SergeIbaka
+"Parsons,Chandler",0.0,14.0,600,0.023,Most Improved Player,2013,ChandlerParsons
+"Walker,Kemba",0.0,9.0,600,0.015,Most Improved Player,2013,KembaWalker
+"Smith,J.R.",1.0,8.0,600,0.013,Most Improved Player,2013,JRSmith
+"Thompson,Klay",1.0,8.0,600,0.013,Most Improved Player,2013,KlayThompson
+"Butler,Jimmy",0.0,7.0,600,0.012,Most Improved Player,2013,JimmyButler
+"Anderson,Ryan",1.0,5.0,600,0.008,Most Improved Player,2013,RyanAnderson
+"Anthony,Carmelo",1.0,5.0,600,0.008,Most Improved Player,2013,CarmeloAnthony
+"Blatche,Andray",1.0,5.0,600,0.008,Most Improved Player,2013,AndrayBlatche
+"Conley,Mike",1.0,5.0,600,0.008,Most Improved Player,2013,MikeConley
+"Leonard,Kawhi",0.0,5.0,600,0.008,Most Improved Player,2013,KawhiLeonard
+"Durant,Kevin",0.0,4.0,600,0.007,Most Improved Player,2013,KevinDurant
+"Afflalo,Arron",0.0,3.0,600,0.005,Most Improved Player,2013,ArronAfflalo
+"Clark,Earl",0.0,3.0,600,0.005,Most Improved Player,2013,EarlClark
+"Faried,Kenneth",0.0,3.0,600,0.005,Most Improved Player,2013,KennethFaried
+"Monroe,Greg",0.0,3.0,600,0.005,Most Improved Player,2013,GregMonroe
+"Noah,Joakim",0.0,3.0,600,0.005,Most Improved Player,2013,JoakimNoah
+"Thompson,Tristan",0.0,2.0,600,0.003,Most Improved Player,2013,TristanThompson
+"Harris,Tobias",0.0,1.0,600,0.002,Most Improved Player,2013,TobiasHarris
+"Jack,Jarrett",0.0,1.0,600,0.002,Most Improved Player,2013,JarrettJack
+"Lawson,Ty",0.0,1.0,600,0.002,Most Improved Player,2013,TyLawson
+"Lopez,Brook",0.0,1.0,600,0.002,Most Improved Player,2013,BrookLopez
+"Lopez,Robin",0.0,1.0,600,0.002,Most Improved Player,2013,RobinLopez
+"Stephenson,Lance",0.0,1.0,600,0.002,Most Improved Player,2013,LanceStephenson
+"Teague,Jeff",0.0,1.0,600,0.002,Most Improved Player,2013,JeffTeague
+"Durant,Kevin",119.0,1232.0,1250,0.986,Most Valuable Player,2014,KevinDurant
+"James,LeBron",6.0,891.0,1250,0.713,Most Valuable Player,2014,LeBronJames
+"Griffin,Blake",0.0,434.0,1250,0.347,Most Valuable Player,2014,BlakeGriffin
+"Noah,Joakim",0.0,322.0,1250,0.258,Most Valuable Player,2014,JoakimNoah
+"Harden,James",0.0,85.0,1250,0.068,Most Valuable Player,2014,JamesHarden
+"Curry,Stephen",0.0,66.0,1250,0.053,Most Valuable Player,2014,StephenCurry
+"Paul,Chris",0.0,45.0,1250,0.036,Most Valuable Player,2014,ChrisPaul
+"Jefferson,Al",0.0,34.0,1250,0.027,Most Valuable Player,2014,AlJefferson
+"George,Paul",0.0,33.0,1250,0.026,Most Valuable Player,2014,PaulGeorge
+"Aldridge,LaMarcus",0.0,26.0,1250,0.021,Most Valuable Player,2014,LaMarcusAldridge
+"Love,Kevin",0.0,25.0,1250,0.020,Most Valuable Player,2014,KevinLove
+"Duncan,Tim",0.0,21.0,1250,0.017,Most Valuable Player,2014,TimDuncan
+"Parker,Tony",0.0,21.0,1250,0.017,Most Valuable Player,2014,TonyParker
+"Nowitzki,Dirk",0.0,7.0,1250,0.006,Most Valuable Player,2014,DirkNowitzki
+"Anthony,Carmelo",0.0,4.0,1250,0.003,Most Valuable Player,2014,CarmeloAnthony
+"Dragić,Goran",0.0,3.0,1250,0.002,Most Valuable Player,2014,GoranDragic
+"Conley,Mike",0.0,1.0,1250,0.001,Most Valuable Player,2014,MikeConley
+"Carter-Williams,Michael",104.0,569.0,620,0.918,Rookie of the Year,2014,MichaelCarterWilliams
+"Oladipo,Victor",16.0,364.0,620,0.587,Rookie of the Year,2014,VictorOladipo
+"Burke,Trey",1.0,96.0,620,0.155,Rookie of the Year,2014,TreyBurke
+"Plumlee,Mason",2.0,58.0,620,0.094,Rookie of the Year,2014,MasonPlumlee
+"Hardaway,Tim",1.0,23.0,620,0.037,Rookie of the Year,2014,TimHardaway
+"Dieng,Gorgui",0.0,3.0,620,0.005,Rookie of the Year,2014,GorguiDieng
+"Adams,Steven",0.0,1.0,620,0.002,Rookie of the Year,2014,StevenAdams
+"Antetokounmpo,Giannis",0.0,1.0,620,0.002,Rookie of the Year,2014,GiannisAntetokounmpo
+"Calathes,Nick",0.0,1.0,620,0.002,Rookie of the Year,2014,NickCalathes
+"Noah,Joakim",100.0,555.0,625,0.888,Defensive Player of the Year,2014,JoakimNoah
+"Hibbert,Roy",8.0,166.0,625,0.266,Defensive Player of the Year,2014,RoyHibbert
+"Jordan,DeAndre",8.0,121.0,625,0.194,Defensive Player of the Year,2014,DeAndreJordan
+"Ibaka,Serge",2.0,79.0,625,0.126,Defensive Player of the Year,2014,SergeIbaka
+"Iguodala,Andre",1.0,47.0,625,0.075,Defensive Player of the Year,2014,AndreIguodala
+"James,LeBron",2.0,31.0,625,0.050,Defensive Player of the Year,2014,LeBronJames
+"George,Paul",0.0,30.0,625,0.048,Defensive Player of the Year,2014,PaulGeorge
+"Davis,Anthony",1.0,25.0,625,0.040,Defensive Player of the Year,2014,AnthonyDavis
+"Howard,Dwight",1.0,25.0,625,0.040,Defensive Player of the Year,2014,DwightHoward
+"Bogut,Andrew",1.0,11.0,625,0.018,Defensive Player of the Year,2014,AndrewBogut
+"Leonard,Kawhi",0.0,9.0,625,0.014,Defensive Player of the Year,2014,KawhiLeonard
+"Tucker,P.J.",1.0,6.0,625,0.010,Defensive Player of the Year,2014,PJTucker
+"Duncan,Tim",0.0,5.0,625,0.008,Defensive Player of the Year,2014,TimDuncan
+"Paul,Chris",0.0,5.0,625,0.008,Defensive Player of the Year,2014,ChrisPaul
+"Ariza,Trevor",0.0,4.0,625,0.006,Defensive Player of the Year,2014,TrevorAriza
+"Gasol,Marc",0.0,4.0,625,0.006,Defensive Player of the Year,2014,MarcGasol
+"Beverley,Patrick",0.0,2.0,625,0.003,Defensive Player of the Year,2014,PatrickBeverley
+"Crawford,Jamal",57.0,421.0,625,0.674,Sixth Man of the Year,2014,JamalCrawford
+"Gibson,Taj",49.0,395.0,625,0.632,Sixth Man of the Year,2014,TajGibson
+"Ginóbili,Manu",9.0,138.0,625,0.221,Sixth Man of the Year,2014,ManuGinobili
+"Morris,Markieff",5.0,85.0,625,0.136,Sixth Man of the Year,2014,MarkieffMorris
+"Jackson,Reggie",4.0,49.0,625,0.078,Sixth Man of the Year,2014,ReggieJackson
+"Carter,Vince",1.0,12.0,625,0.019,Sixth Man of the Year,2014,VinceCarter
+"Augustin,D.J.",0.0,6.0,625,0.010,Sixth Man of the Year,2014,DJAugustin
+"Kanter,Enes",0.0,3.0,625,0.005,Sixth Man of the Year,2014,EnesKanter
+"Waiters,Dion",0.0,3.0,625,0.005,Sixth Man of the Year,2014,DionWaiters
+"Young,Nick",0.0,3.0,625,0.005,Sixth Man of the Year,2014,NickYoung
+"Andersen,Chris",0.0,2.0,625,0.003,Sixth Man of the Year,2014,ChrisAndersen
+"Belinelli,Marco",0.0,2.0,625,0.003,Sixth Man of the Year,2014,MarcoBelinelli
+"Blatche,Andray",0.0,1.0,625,0.002,Sixth Man of the Year,2014,AndrayBlatche
+"Hardaway,Tim",0.0,1.0,625,0.002,Sixth Man of the Year,2014,TimHardaway
+"Mills,Patty",0.0,1.0,625,0.002,Sixth Man of the Year,2014,PattyMills
+"Mozgov,Timofey",0.0,1.0,625,0.002,Sixth Man of the Year,2014,TimofeyMozgov
+"Vásquez,Greivis",0.0,1.0,625,0.002,Sixth Man of the Year,2014,GreivisVasquez
+"Williams,Mo",0.0,1.0,625,0.002,Sixth Man of the Year,2014,MoWilliams
+"Dragić,Goran",65.0,408.0,630,0.648,Most Improved Player,2014,GoranDragic
+"Stephenson,Lance",13.0,158.0,630,0.251,Most Improved Player,2014,LanceStephenson
+"Davis,Anthony",16.0,155.0,630,0.246,Most Improved Player,2014,AnthonyDavis
+"Green,Gerald",16.0,117.0,630,0.186,Most Improved Player,2014,GeraldGreen
+"Jordan,DeAndre",4.0,66.0,630,0.105,Most Improved Player,2014,DeAndreJordan
+"Lowry,Kyle",2.0,43.0,630,0.068,Most Improved Player,2014,KyleLowry
+"Griffin,Blake",6.0,39.0,630,0.062,Most Improved Player,2014,BlakeGriffin
+"DeRozan,DeMar",1.0,28.0,630,0.044,Most Improved Player,2014,DeMarDeRozan
+"Mills,Patty",0.0,14.0,630,0.022,Most Improved Player,2014,PattyMills
+"Morris,Markieff",1.0,13.0,630,0.021,Most Improved Player,2014,MarkieffMorris
+"Thomas,Isaiah",0.0,13.0,630,0.021,Most Improved Player,2014,IsaiahThomas
+"Livingston,Shaun",0.0,11.0,630,0.017,Most Improved Player,2014,ShaunLivingston
+"Augustin,D.J.",1.0,9.0,630,0.014,Most Improved Player,2014,DJAugustin
+"Jackson,Reggie",0.0,8.0,630,0.013,Most Improved Player,2014,ReggieJackson
+"Lopez,Robin",0.0,6.0,630,0.010,Most Improved Player,2014,RobinLopez
+"Thompson,Klay",0.0,6.0,630,0.010,Most Improved Player,2014,KlayThompson
+"Durant,Kevin",1.0,5.0,630,0.008,Most Improved Player,2014,KevinDurant
+"Cousins,DeMarcus",0.0,5.0,630,0.008,Most Improved Player,2014,DeMarcusCousins
+"Jefferson,Al",0.0,4.0,630,0.006,Most Improved Player,2014,AlJefferson
+"Beal,Bradley",0.0,3.0,630,0.005,Most Improved Player,2014,BradleyBeal
+"Conley,Mike",0.0,3.0,630,0.005,Most Improved Player,2014,MikeConley
+"Drummond,Andre",0.0,3.0,630,0.005,Most Improved Player,2014,AndreDrummond
+"Gibson,Taj",0.0,3.0,630,0.005,Most Improved Player,2014,TajGibson
+"James,LeBron",0.0,3.0,630,0.005,Most Improved Player,2014,LeBronJames
+"Jones,Terrence",0.0,3.0,630,0.005,Most Improved Player,2014,TerrenceJones
+"Meeks,Jodie",0.0,3.0,630,0.005,Most Improved Player,2014,JodieMeeks
+"Aldridge,LaMarcus",0.0,1.0,630,0.002,Most Improved Player,2014,LaMarcusAldridge
+"Burks,Alec",0.0,1.0,630,0.002,Most Improved Player,2014,AlecBurks
+"Millsap,Paul",0.0,1.0,630,0.002,Most Improved Player,2014,PaulMillsap
+"Parsons,Chandler",0.0,1.0,630,0.002,Most Improved Player,2014,ChandlerParsons
+"Wall,John",0.0,1.0,630,0.002,Most Improved Player,2014,JohnWall
+"Curry,Stephen",100.0,1198.0,1300,0.922,Most Valuable Player,2015,StephenCurry
+"Harden,James",25.0,936.0,1300,0.720,Most Valuable Player,2015,JamesHarden
+"James,LeBron",5.0,552.0,1300,0.425,Most Valuable Player,2015,LeBronJames
+"Westbrook,Russell",0.0,352.0,1300,0.271,Most Valuable Player,2015,RussellWestbrook
+"Davis,Anthony",0.0,203.0,1300,0.156,Most Valuable Player,2015,AnthonyDavis
+"Paul,Chris",0.0,124.0,1300,0.095,Most Valuable Player,2015,ChrisPaul
+"Aldridge,LaMarcus",0.0,6.0,1300,0.005,Most Valuable Player,2015,LaMarcusAldridge
+"Gasol,Marc",0.0,3.0,1300,0.002,Most Valuable Player,2015,MarcGasol
+"Griffin,Blake",0.0,3.0,1300,0.002,Most Valuable Player,2015,BlakeGriffin
+"Duncan,Tim",0.0,1.0,1300,0.001,Most Valuable Player,2015,TimDuncan
+"Leonard,Kawhi",0.0,1.0,1300,0.001,Most Valuable Player,2015,KawhiLeonard
+"Thompson,Klay",0.0,1.0,1300,0.001,Most Valuable Player,2015,KlayThompson
+"Wiggins,Andrew",110.0,604.0,650,0.929,Rookie of the Year,2015,AndrewWiggins
+"Mirotić,Nikola",14.0,335.0,650,0.515,Rookie of the Year,2015,NikolaMirotic
+"Noel,Nerlens",3.0,141.0,650,0.217,Rookie of the Year,2015,NerlensNoel
+"Payton,Elfrid",3.0,79.0,650,0.122,Rookie of the Year,2015,ElfridPayton
+"Smart,Marcus",0.0,6.0,650,0.009,Rookie of the Year,2015,MarcusSmart
+"Nurkić,Jusuf",0.0,3.0,650,0.005,Rookie of the Year,2015,JusufNurkic
+"Clarkson,Jordan",0.0,2.0,650,0.003,Rookie of the Year,2015,JordanClarkson
+"Leonard,Kawhi",37.0,333.0,645,0.516,Defensive Player of the Year,2015,KawhiLeonard
+"Green,Draymond",45.0,317.0,645,0.491,Defensive Player of the Year,2015,DraymondGreen
+"Jordan,DeAndre",32.0,261.0,645,0.405,Defensive Player of the Year,2015,DeAndreJordan
+"Davis,Anthony",11.0,107.0,645,0.166,Defensive Player of the Year,2015,AnthonyDavis
+"Gobert,Rudy",2.0,33.0,645,0.051,Defensive Player of the Year,2015,RudyGobert
+"Bogut,Andrew",0.0,31.0,645,0.048,Defensive Player of the Year,2015,AndrewBogut
+"Allen,Tony",1.0,29.0,645,0.045,Defensive Player of the Year,2015,TonyAllen
+"Duncan,Tim",1.0,12.0,645,0.019,Defensive Player of the Year,2015,TimDuncan
+"Kidd-Gilchrist,Michael",0.0,9.0,645,0.014,Defensive Player of the Year,2015,MichaelKiddGilchrist
+"Butler,Jimmy",0.0,7.0,645,0.011,Defensive Player of the Year,2015,JimmyButler
+"Gasol,Marc",0.0,7.0,645,0.011,Defensive Player of the Year,2015,MarcGasol
+"Noah,Joakim",0.0,4.0,645,0.006,Defensive Player of the Year,2015,JoakimNoah
+"Ariza,Trevor",0.0,3.0,645,0.005,Defensive Player of the Year,2015,TrevorAriza
+"James,LeBron",0.0,3.0,645,0.005,Defensive Player of the Year,2015,LeBronJames
+"Beverley,Patrick",0.0,1.0,645,0.002,Defensive Player of the Year,2015,PatrickBeverley
+"Carroll,DeMarre",0.0,1.0,645,0.002,Defensive Player of the Year,2015,DeMarreCarroll
+"Noel,Nerlens",0.0,1.0,645,0.002,Defensive Player of the Year,2015,NerlensNoel
+"Paul,Chris",0.0,1.0,645,0.002,Defensive Player of the Year,2015,ChrisPaul
+"Whiteside,Hassan",0.0,1.0,645,0.002,Defensive Player of the Year,2015,HassanWhiteside
+"Williams,Lou",78.0,502.0,650,0.772,Sixth Man of the Year,2015,LouWilliams
+"Thomas,Isaiah",33.0,324.0,650,0.498,Sixth Man of the Year,2015,IsaiahThomas
+"Crawford,Jamal",8.0,131.0,650,0.202,Sixth Man of the Year,2015,JamalCrawford
+"Iguodala,Andre",7.0,100.0,650,0.154,Sixth Man of the Year,2015,AndreIguodala
+"Thompson,Tristan",0.0,33.0,650,0.051,Sixth Man of the Year,2015,TristanThompson
+"Mirotić,Nikola",1.0,24.0,650,0.037,Sixth Man of the Year,2015,NikolaMirotic
+"Speights,Marreese",1.0,20.0,650,0.031,Sixth Man of the Year,2015,MarreeseSpeights
+"Brewer,Corey",1.0,12.0,650,0.018,Sixth Man of the Year,2015,CoreyBrewer
+"Ginóbili,Manu",0.0,12.0,650,0.018,Sixth Man of the Year,2015,ManuGinobili
+"Gibson,Taj",1.0,8.0,650,0.012,Sixth Man of the Year,2015,TajGibson
+"Brooks,Aaron",0.0,1.0,650,0.002,Sixth Man of the Year,2015,AaronBrooks
+"Kaman,Chris",0.0,1.0,650,0.002,Sixth Man of the Year,2015,ChrisKaman
+"Morrow,Anthony",0.0,1.0,650,0.002,Sixth Man of the Year,2015,AnthonyMorrow
+"Schröder,Dennis",0.0,1.0,650,0.002,Sixth Man of the Year,2015,DennisSchroder
+"Butler,Jimmy",92.0,535.0,645,0.829,Most Improved Player,2015,JimmyButler
+"Green,Draymond",11.0,200.0,645,0.310,Most Improved Player,2015,DraymondGreen
+"Gobert,Rudy",12.0,189.0,645,0.293,Most Improved Player,2015,RudyGobert
+"Whiteside,Hassan",5.0,88.0,645,0.136,Most Improved Player,2015,HassanWhiteside
+"Thompson,Klay",2.0,42.0,645,0.065,Most Improved Player,2015,KlayThompson
+"Davis,Anthony",4.0,27.0,645,0.042,Most Improved Player,2015,AnthonyDavis
+"Antetokounmpo,Giannis",1.0,22.0,645,0.034,Most Improved Player,2015,GiannisAntetokounmpo
+"Motiejūnas,Donatas",0.0,7.0,645,0.011,Most Improved Player,2015,DonatasMotiejunas
+"Schröder,Dennis",0.0,6.0,645,0.009,Most Improved Player,2015,DennisSchroder
+"Carroll,DeMarre",1.0,5.0,645,0.008,Most Improved Player,2015,DeMarreCarroll
+"Zeller,Tyler",1.0,5.0,645,0.008,Most Improved Player,2015,TylerZeller
+"Cousins,DeMarcus",0.0,4.0,645,0.006,Most Improved Player,2015,DeMarcusCousins
+"Middleton,Khris",0.0,4.0,645,0.006,Most Improved Player,2015,KhrisMiddleton
+"Crowder,Jae",0.0,3.0,645,0.005,Most Improved Player,2015,JaeCrowder
+"Irving,Kyrie",0.0,3.0,645,0.005,Most Improved Player,2015,KyrieIrving
+"Jordan,DeAndre",0.0,3.0,645,0.005,Most Improved Player,2015,DeAndreJordan
+"Oladipo,Victor",0.0,3.0,645,0.005,Most Improved Player,2015,VictorOladipo
+"Caldwell-Pope,Kentavious",0.0,2.0,645,0.003,Most Improved Player,2015,KentaviousCaldwellPope
+"Vučević,Nikola",0.0,2.0,645,0.003,Most Improved Player,2015,NikolaVucevic
+"Covington,Robert",0.0,1.0,645,0.002,Most Improved Player,2015,RobertCovington
+"Evans,Tyreke",0.0,1.0,645,0.002,Most Improved Player,2015,TyrekeEvans
+"Favors,Derrick",0.0,1.0,645,0.002,Most Improved Player,2015,DerrickFavors
+"Gasol,Marc",0.0,1.0,645,0.002,Most Improved Player,2015,MarcGasol
+"Harris,Tobias",0.0,1.0,645,0.002,Most Improved Player,2015,TobiasHarris
+"Hayward,Gordon",0.0,1.0,645,0.002,Most Improved Player,2015,GordonHayward
+"Hill,George",0.0,1.0,645,0.002,Most Improved Player,2015,GeorgeHill
+"Kanter,Enes",0.0,1.0,645,0.002,Most Improved Player,2015,EnesKanter
+"Knight,Brandon",0.0,1.0,645,0.002,Most Improved Player,2015,BrandonKnight
+"Leonard,Kawhi",0.0,1.0,645,0.002,Most Improved Player,2015,KawhiLeonard
+"Leonard,Meyers",0.0,1.0,645,0.002,Most Improved Player,2015,MeyersLeonard
+"Curry,Stephen",131.0,1310.0,1310,1.000,Most Valuable Player,2016,StephenCurry
+"Leonard,Kawhi",0.0,634.0,1310,0.484,Most Valuable Player,2016,KawhiLeonard
+"James,LeBron",0.0,631.0,1310,0.482,Most Valuable Player,2016,LeBronJames
+"Westbrook,Russell",0.0,486.0,1310,0.371,Most Valuable Player,2016,RussellWestbrook
+"Durant,Kevin",0.0,147.0,1310,0.112,Most Valuable Player,2016,KevinDurant
+"Paul,Chris",0.0,107.0,1310,0.082,Most Valuable Player,2016,ChrisPaul
+"Green,Draymond",0.0,50.0,1310,0.038,Most Valuable Player,2016,DraymondGreen
+"Lillard,Damian",0.0,26.0,1310,0.020,Most Valuable Player,2016,DamianLillard
+"Harden,James",0.0,9.0,1310,0.007,Most Valuable Player,2016,JamesHarden
+"Lowry,Kyle",0.0,6.0,1310,0.005,Most Valuable Player,2016,KyleLowry
+"Towns,Karl-Anthony",130.0,650.0,650,1.000,Rookie of the Year,2016,KarlAnthonyTowns
+"Porziņģis,Kristaps",0.0,363.0,650,0.558,Rookie of the Year,2016,KristapsPorzingis
+"Jokić,Nikola",0.0,59.0,650,0.091,Rookie of the Year,2016,NikolaJokic
+"Booker,Devin",0.0,49.0,650,0.075,Rookie of the Year,2016,DevinBooker
+"Okafor,Jahlil",0.0,34.0,650,0.052,Rookie of the Year,2016,JahlilOkafor
+"Winslow,Justise",0.0,7.0,650,0.011,Rookie of the Year,2016,JustiseWinslow
+"Mudiay,Emmanuel",0.0,4.0,650,0.006,Rookie of the Year,2016,EmmanuelMudiay
+"Turner,Myles",0.0,3.0,650,0.005,Rookie of the Year,2016,MylesTurner
+"Russell,D'Angelo",0.0,1.0,650,0.002,Rookie of the Year,2016,DAngeloRussell
+"Leonard,Kawhi",84.0,547.0,650,0.842,Defensive Player of the Year,2016,KawhiLeonard
+"Green,Draymond",44.0,421.0,650,0.648,Defensive Player of the Year,2016,DraymondGreen
+"Whiteside,Hassan",2.0,83.0,650,0.128,Defensive Player of the Year,2016,HassanWhiteside
+"Jordan,DeAndre",0.0,50.0,650,0.077,Defensive Player of the Year,2016,DeAndreJordan
+"Millsap,Paul",0.0,21.0,650,0.032,Defensive Player of the Year,2016,PaulMillsap
+"Bradley,Avery",0.0,14.0,650,0.022,Defensive Player of the Year,2016,AveryBradley
+"Gobert,Rudy",0.0,13.0,650,0.020,Defensive Player of the Year,2016,RudyGobert
+"Allen,Tony",0.0,5.0,650,0.008,Defensive Player of the Year,2016,TonyAllen
+"Davis,Anthony",0.0,4.0,650,0.006,Defensive Player of the Year,2016,AnthonyDavis
+"Drummond,Andre",0.0,3.0,650,0.005,Defensive Player of the Year,2016,AndreDrummond
+"Butler,Jimmy",0.0,2.0,650,0.003,Defensive Player of the Year,2016,JimmyButler
+"James,LeBron",0.0,2.0,650,0.003,Defensive Player of the Year,2016,LeBronJames
+"Ariza,Trevor",0.0,1.0,650,0.002,Defensive Player of the Year,2016,TrevorAriza
+"Crowder,Jae",0.0,1.0,650,0.002,Defensive Player of the Year,2016,JaeCrowder
+"Horford,Al",0.0,1.0,650,0.002,Defensive Player of the Year,2016,AlHorford
+"Lowry,Kyle",0.0,1.0,650,0.002,Defensive Player of the Year,2016,KyleLowry
+"Paul,Chris",0.0,1.0,650,0.002,Defensive Player of the Year,2016,ChrisPaul
+"Crawford,Jamal",51.0,341.0,650,0.525,Sixth Man of the Year,2016,JamalCrawford
+"Iguodala,Andre",33.0,288.0,650,0.443,Sixth Man of the Year,2016,AndreIguodala
+"Kanter,Enes",19.0,182.0,650,0.280,Sixth Man of the Year,2016,EnesKanter
+"Barton,Will",15.0,158.0,650,0.243,Sixth Man of the Year,2016,WillBarton
+"Turner,Evan",3.0,46.0,650,0.071,Sixth Man of the Year,2016,EvanTurner
+"Anderson,Ryan",4.0,43.0,650,0.066,Sixth Man of the Year,2016,RyanAnderson
+"Lin,Jeremy",1.0,30.0,650,0.046,Sixth Man of the Year,2016,JeremyLin
+"Davis,Ed",1.0,21.0,650,0.032,Sixth Man of the Year,2016,EdDavis
+"Schröder,Dennis",1.0,17.0,650,0.026,Sixth Man of the Year,2016,DennisSchroder
+"Thompson,Tristan",2.0,16.0,650,0.025,Sixth Man of the Year,2016,TristanThompson
+"Livingston,Shaun",0.0,7.0,650,0.011,Sixth Man of the Year,2016,ShaunLivingston
+"Barea,J.J.",0.0,5.0,650,0.008,Sixth Man of the Year,2016,JJBarea
+"Diaw,Boris",0.0,5.0,650,0.008,Sixth Man of the Year,2016,BorisDiaw
+"LaVine,Zach",0.0,4.0,650,0.006,Sixth Man of the Year,2016,ZachLaVine
+"Collison,Darren",0.0,3.0,650,0.005,Sixth Man of the Year,2016,DarrenCollison
+"Crabbe,Allen",0.0,1.0,650,0.002,Sixth Man of the Year,2016,AllenCrabbe
+"Holiday,Jrue",0.0,1.0,650,0.002,Sixth Man of the Year,2016,ueHoliday
+"Patterson,Patrick",0.0,1.0,650,0.002,Sixth Man of the Year,2016,PatrickPatterson
+"Teletović,Mirza",0.0,1.0,650,0.002,Sixth Man of the Year,2016,MirzaTeletovic
+"McCollum,CJ",101.0,559.0,650,0.860,Most Improved Player,2016,CJMcCollum
+"Walker,Kemba",7.0,166.0,650,0.255,Most Improved Player,2016,KembaWalker
+"Antetokounmpo,Giannis",4.0,99.0,650,0.152,Most Improved Player,2016,GiannisAntetokounmpo
+"Curry,Stephen",7.0,83.0,650,0.128,Most Improved Player,2016,StephenCurry
+"Barton,Will",1.0,62.0,650,0.095,Most Improved Player,2016,WillBarton
+"Crowder,Jae",1.0,45.0,650,0.069,Most Improved Player,2016,JaeCrowder
+"Green,Draymond",2.0,43.0,650,0.066,Most Improved Player,2016,DraymondGreen
+"Thomas,Isaiah",3.0,30.0,650,0.046,Most Improved Player,2016,IsaiahThomas
+"Whiteside,Hassan",1.0,26.0,650,0.040,Most Improved Player,2016,HassanWhiteside
+"Leonard,Kawhi",1.0,18.0,650,0.028,Most Improved Player,2016,KawhiLeonard
+"Drummond,Andre",1.0,11.0,650,0.017,Most Improved Player,2016,AndreDrummond
+"Harris,Gary",1.0,6.0,650,0.009,Most Improved Player,2016,GaryHarris
+"Bazemore,Kent",0.0,4.0,650,0.006,Most Improved Player,2016,KentBazemore
+"Fournier,Evan",0.0,4.0,650,0.006,Most Improved Player,2016,EvanFournier
+"Hood,Rodney",0.0,3.0,650,0.005,Most Improved Player,2016,RodneyHood
+"Jackson,Reggie",0.0,3.0,650,0.005,Most Improved Player,2016,ReggieJackson
+"Mahinmi,Ian",0.0,3.0,650,0.005,Most Improved Player,2016,IanMahinmi
+"Westbrook,Russell",0.0,3.0,650,0.005,Most Improved Player,2016,RussellWestbrook
+"LaVine,Zach",0.0,1.0,650,0.002,Most Improved Player,2016,ZachLaVine
+"Lowry,Kyle",0.0,1.0,650,0.002,Most Improved Player,2016,KyleLowry
+"Westbrook,Russell",69.0,888.0,1010,0.879,Most Valuable Player,2017,RussellWestbrook
+"Harden,James",22.0,753.0,1010,0.746,Most Valuable Player,2017,JamesHarden
+"Leonard,Kawhi",9.0,500.0,1010,0.495,Most Valuable Player,2017,KawhiLeonard
+"James,LeBron",1.0,333.0,1010,0.330,Most Valuable Player,2017,LeBronJames
+"Thomas,Isaiah",0.0,81.0,1010,0.080,Most Valuable Player,2017,IsaiahThomas
+"Curry,Stephen",0.0,52.0,1010,0.051,Most Valuable Player,2017,StephenCurry
+"Antetokounmpo,Giannis",0.0,7.0,1010,0.007,Most Valuable Player,2017,GiannisAntetokounmpo
+"Wall,John",0.0,7.0,1010,0.007,Most Valuable Player,2017,JohnWall
+"Davis,Anthony",0.0,2.0,1010,0.002,Most Valuable Player,2017,AnthonyDavis
+"Durant,Kevin",0.0,2.0,1010,0.002,Most Valuable Player,2017,KevinDurant
+"DeRozan,DeMar",0.0,1.0,1010,0.001,Most Valuable Player,2017,DeMarDeRozan
+"Brogdon,Malcolm",64.0,414.0,500,0.828,Rookie of the Year,2017,MalcolmBrogdon
+"Šarić,Dario",13.0,266.0,500,0.532,Rookie of the Year,2017,DarioSaric
+"Embiid,Joel",23.0,177.0,500,0.354,Rookie of the Year,2017,JoelEmbiid
+"Hield,Buddy",0.0,21.0,500,0.042,Rookie of the Year,2017,BuddyHield
+"Hernangómez,Willy",0.0,8.0,500,0.016,Rookie of the Year,2017,WillyHernangomez
+"Murray,Jamal",0.0,8.0,500,0.016,Rookie of the Year,2017,JamalMurray
+"Chriss,Marquese",0.0,3.0,500,0.006,Rookie of the Year,2017,MarqueseChriss
+"Brown,Jaylen",0.0,1.0,500,0.002,Rookie of the Year,2017,JaylenBrown
+"Ferrell,Yogi",0.0,1.0,500,0.002,Rookie of the Year,2017,YogiFerrell
+"McGruder,Rodney",0.0,1.0,500,0.002,Rookie of the Year,2017,RodneyMcGruder
+"Green,Draymond",73.0,434.0,500,0.868,Defensive Player of the Year,2017,DraymondGreen
+"Gobert,Rudy",16.0,269.0,500,0.538,Defensive Player of the Year,2017,RudyGobert
+"Leonard,Kawhi",11.0,182.0,500,0.364,Defensive Player of the Year,2017,KawhiLeonard
+"Covington,Robert",0.0,4.0,500,0.008,Defensive Player of the Year,2017,RobertCovington
+"James,LeBron",0.0,3.0,500,0.006,Defensive Player of the Year,2017,LeBronJames
+"Roberson,Andre",0.0,3.0,500,0.006,Defensive Player of the Year,2017,AndreRoberson
+"Whiteside,Hassan",0.0,3.0,500,0.006,Defensive Player of the Year,2017,HassanWhiteside
+"Aldridge,LaMarcus",0.0,1.0,500,0.002,Defensive Player of the Year,2017,LaMarcusAldridge
+"Beverley,Patrick",0.0,1.0,500,0.002,Defensive Player of the Year,2017,PatrickBeverley
+"Gordon,Eric",46.0,358.0,500,0.716,Sixth Man of the Year,2017,EricGordon
+"Iguodala,Andre",43.0,326.0,500,0.652,Sixth Man of the Year,2017,AndreIguodala
+"Williams,Lou",5.0,70.0,500,0.140,Sixth Man of the Year,2017,LouWilliams
+"Randolph,Zach",2.0,46.0,500,0.092,Sixth Man of the Year,2017,ZachRandolph
+"Johnson,James",1.0,25.0,500,0.050,Sixth Man of the Year,2017,JamesJohnson
+"Monroe,Greg",1.0,21.0,500,0.042,Sixth Man of the Year,2017,GregMonroe
+"Crawford,Jamal",1.0,20.0,500,0.040,Sixth Man of the Year,2017,JamalCrawford
+"Kanter,Enes",1.0,14.0,500,0.028,Sixth Man of the Year,2017,EnesKanter
+"Mills,Patty",0.0,14.0,500,0.028,Sixth Man of the Year,2017,PattyMills
+"Hardaway,Tim",0.0,3.0,500,0.006,Sixth Man of the Year,2017,TimHardaway
+"Brogdon,Malcolm",0.0,1.0,500,0.002,Sixth Man of the Year,2017,MalcolmBrogdon
+"Carter,Vince",0.0,1.0,500,0.002,Sixth Man of the Year,2017,VinceCarter
+"Johnson,Tyler",0.0,1.0,500,0.002,Sixth Man of the Year,2017,TylerJohnson
+"Antetokounmpo,Giannis",80.0,428.0,500,0.856,Most Improved Player,2017,GiannisAntetokounmpo
+"Jokić,Nikola",14.0,161.0,500,0.322,Most Improved Player,2017,NikolaJokic
+"Gobert,Rudy",1.0,113.0,500,0.226,Most Improved Player,2017,RudyGobert
+"Porter,Otto",1.0,43.0,500,0.086,Most Improved Player,2017,OttoPorter
+"Thomas,Isaiah",0.0,35.0,500,0.070,Most Improved Player,2017,IsaiahThomas
+"Johnson,James",1.0,34.0,500,0.068,Most Improved Player,2017,JamesJohnson
+"Beal,Bradley",1.0,19.0,500,0.038,Most Improved Player,2017,BradleyBeal
+"Booker,Devin",1.0,18.0,500,0.036,Most Improved Player,2017,DevinBooker
+"Hardaway,Tim",0.0,14.0,500,0.028,Most Improved Player,2017,TimHardaway
+"Conley,Mike",1.0,5.0,500,0.010,Most Improved Player,2017,MikeConley
+"Waiters,Dion",0.0,4.0,500,0.008,Most Improved Player,2017,DionWaiters
+"Hayward,Gordon",0.0,3.0,500,0.006,Most Improved Player,2017,GordonHayward
+"Nurkić,Jusuf",0.0,3.0,500,0.006,Most Improved Player,2017,JusufNurkic
+"Porziņģis,Kristaps",0.0,3.0,500,0.006,Most Improved Player,2017,KristapsPorzingis
+"Schröder,Dennis",0.0,3.0,500,0.006,Most Improved Player,2017,DennisSchroder
+"Barnes,Harrison",0.0,2.0,500,0.004,Most Improved Player,2017,HarrisonBarnes
+"Curry,Seth",0.0,2.0,500,0.004,Most Improved Player,2017,SethCurry
+"Harris,Gary",0.0,2.0,500,0.004,Most Improved Player,2017,GaryHarris
+"Turner,Myles",0.0,2.0,500,0.004,Most Improved Player,2017,MylesTurner
+"Bradley,Avery",0.0,1.0,500,0.002,Most Improved Player,2017,AveryBradley
+"Capela,Clint",0.0,1.0,500,0.002,Most Improved Player,2017,ClintCapela
+"DeRozan,DeMar",0.0,1.0,500,0.002,Most Improved Player,2017,DeMarDeRozan
+"Ingles,Joe",0.0,1.0,500,0.002,Most Improved Player,2017,JoeIngles
+"Wall,John",0.0,1.0,500,0.002,Most Improved Player,2017,JohnWall
+"Whiteside,Hassan",0.0,1.0,500,0.002,Most Improved Player,2017,HassanWhiteside
+"Harden,James",86.0,965.0,1010,0.955,Most Valuable Player,2018,JamesHarden
+"James,LeBron",15.0,738.0,1010,0.731,Most Valuable Player,2018,LeBronJames
+"Davis,Anthony",0.0,445.0,1010,0.441,Most Valuable Player,2018,AnthonyDavis
+"Lillard,Damian",0.0,207.0,1010,0.205,Most Valuable Player,2018,DamianLillard
+"Westbrook,Russell",0.0,76.0,1010,0.075,Most Valuable Player,2018,RussellWestbrook
+"Antetokounmpo,Giannis",0.0,75.0,1010,0.074,Most Valuable Player,2018,GiannisAntetokounmpo
+"Durant,Kevin",0.0,66.0,1010,0.065,Most Valuable Player,2018,KevinDurant
+"DeRozan,DeMar",0.0,32.0,1010,0.032,Most Valuable Player,2018,DeMarDeRozan
+"Aldridge,LaMarcus",0.0,6.0,1010,0.006,Most Valuable Player,2018,LaMarcusAldridge
+"Butler,Jimmy",0.0,5.0,1010,0.005,Most Valuable Player,2018,JimmyButler
+"Curry,Stephen",0.0,5.0,1010,0.005,Most Valuable Player,2018,StephenCurry
+"Embiid,Joel",0.0,4.0,1010,0.004,Most Valuable Player,2018,JoelEmbiid
+"Oladipo,Victor",0.0,2.0,1010,0.002,Most Valuable Player,2018,VictorOladipo
+"Simmons,Ben",90.0,481.0,505,0.952,Rookie of the Year,2018,BenSimmons
+"Mitchell,Donovan",11.0,323.0,505,0.640,Rookie of the Year,2018,DonovanMitchell
+"Tatum,Jayson",0.0,101.0,505,0.200,Rookie of the Year,2018,JaysonTatum
+"Kuzma,Kyle",0.0,3.0,505,0.006,Rookie of the Year,2018,KyleKuzma
+"Smith,Dennis",0.0,1.0,505,0.002,Rookie of the Year,2018,DennisSmith
+"Gobert,Rudy",89.0,466.0,505,0.923,Defensive Player of the Year,2018,RudyGobert
+"Embiid,Joel",2.0,163.0,505,0.323,Defensive Player of the Year,2018,JoelEmbiid
+"Davis,Anthony",5.0,139.0,505,0.275,Defensive Player of the Year,2018,AnthonyDavis
+"George,Paul",2.0,38.0,505,0.075,Defensive Player of the Year,2018,PaulGeorge
+"Horford,Al",1.0,37.0,505,0.073,Defensive Player of the Year,2018,AlHorford
+"Green,Draymond",1.0,20.0,505,0.040,Defensive Player of the Year,2018,DraymondGreen
+"Holiday,Jrue",1.0,11.0,505,0.022,Defensive Player of the Year,2018,ueHoliday
+"Covington,Robert",0.0,8.0,505,0.016,Defensive Player of the Year,2018,RobertCovington
+"Durant,Kevin",0.0,7.0,505,0.014,Defensive Player of the Year,2018,KevinDurant
+"Brown,Jaylen",0.0,5.0,505,0.010,Defensive Player of the Year,2018,JaylenBrown
+"Thompson,Klay",0.0,4.0,505,0.008,Defensive Player of the Year,2018,KlayThompson
+"Adams,Steven",0.0,3.0,505,0.006,Defensive Player of the Year,2018,StevenAdams
+"Butler,Jimmy",0.0,3.0,505,0.006,Defensive Player of the Year,2018,JimmyButler
+"Capela,Clint",0.0,2.0,505,0.004,Defensive Player of the Year,2018,ClintCapela
+"Drummond,Andre",0.0,1.0,505,0.002,Defensive Player of the Year,2018,AndreDrummond
+"Nurkić,Jusuf",0.0,1.0,505,0.002,Defensive Player of the Year,2018,JusufNurkic
+"Oladipo,Victor",0.0,1.0,505,0.002,Defensive Player of the Year,2018,VictorOladipo
+"Williams,Lou",97.0,495.0,505,0.980,Sixth Man of the Year,2018,LouWilliams
+"Gordon,Eric",3.0,246.0,505,0.487,Sixth Man of the Year,2018,EricGordon
+"VanVleet,Fred",1.0,64.0,505,0.127,Sixth Man of the Year,2018,FredVanVleet
+"Barton,Will",0.0,62.0,505,0.123,Sixth Man of the Year,2018,WillBarton
+"Ellington,Wayne",0.0,9.0,505,0.018,Sixth Man of the Year,2018,WayneEllington
+"Olynyk,Kelly",0.0,7.0,505,0.014,Sixth Man of the Year,2018,KellyOlynyk
+"Clarkson,Jordan",0.0,5.0,505,0.010,Sixth Man of the Year,2018,JordanClarkson
+"Mirotić,Nikola",0.0,5.0,505,0.010,Sixth Man of the Year,2018,NikolaMirotic
+"Kuzma,Kyle",0.0,4.0,505,0.008,Sixth Man of the Year,2018,KyleKuzma
+"Rozier,Terry",0.0,3.0,505,0.006,Sixth Man of the Year,2018,TerryRozier
+"Wade,Dwyane",0.0,3.0,505,0.006,Sixth Man of the Year,2018,DwyaneWade
+"Barea,J.J.",0.0,1.0,505,0.002,Sixth Man of the Year,2018,JJBarea
+"Belinelli,Marco",0.0,1.0,505,0.002,Sixth Man of the Year,2018,MarcoBelinelli
+"Hood,Rodney",0.0,1.0,505,0.002,Sixth Man of the Year,2018,RodneyHood
+"Mbah a Moute,Luc",0.0,1.0,505,0.002,Sixth Man of the Year,2018,LucMbahaMoute
+"Poeltl,Jakob",0.0,1.0,505,0.002,Sixth Man of the Year,2018,JakobPoeltl
+"Satoranský,Tomáš",0.0,1.0,505,0.002,Sixth Man of the Year,2018,TomasSatoransky
+"Oladipo,Victor",99.0,499.0,505,0.988,Most Improved Player,2018,VictorOladipo
+"Capela,Clint",1.0,99.0,505,0.196,Most Improved Player,2018,ClintCapela
+"Dinwiddie,Spencer",1.0,50.0,505,0.099,Most Improved Player,2018,SpencerDinwiddie
+"Drummond,Andre",0.0,46.0,505,0.091,Most Improved Player,2018,AndreDrummond
+"Randle,Julius",0.0,36.0,505,0.071,Most Improved Player,2018,JuliusRandle
+"Adams,Steven",0.0,34.0,505,0.067,Most Improved Player,2018,StevenAdams
+"Brown,Jaylen",0.0,32.0,505,0.063,Most Improved Player,2018,JaylenBrown
+"Murray,Jamal",0.0,24.0,505,0.048,Most Improved Player,2018,JamalMurray
+"DeRozan,DeMar",0.0,9.0,505,0.018,Most Improved Player,2018,DeMarDeRozan
+"Rozier,Terry",0.0,8.0,505,0.016,Most Improved Player,2018,TerryRozier
+"Williams,Lou",0.0,8.0,505,0.016,Most Improved Player,2018,LouWilliams
+"Antetokounmpo,Giannis",0.0,7.0,505,0.014,Most Improved Player,2018,GiannisAntetokounmpo
+"Jokić,Nikola",0.0,6.0,505,0.012,Most Improved Player,2018,NikolaJokic
+"Moore,E'Twaun",0.0,6.0,505,0.012,Most Improved Player,2018,ETwaunMoore
+"Sabonis,Domantas",0.0,6.0,505,0.012,Most Improved Player,2018,DomantasSabonis
+"VanVleet,Fred",0.0,6.0,505,0.012,Most Improved Player,2018,FredVanVleet
+"Evans,Tyreke",0.0,4.0,505,0.008,Most Improved Player,2018,TyrekeEvans
+"Ingram,Brandon",0.0,4.0,505,0.008,Most Improved Player,2018,BrandonIngram
+"Murray,Dejounte",0.0,4.0,505,0.008,Most Improved Player,2018,DejounteMurray
+"Harris,Tobias",0.0,3.0,505,0.006,Most Improved Player,2018,TobiasHarris
+"Ingles,Joe",0.0,3.0,505,0.006,Most Improved Player,2018,JoeIngles
+"Šarić,Dario",0.0,3.0,505,0.006,Most Improved Player,2018,DarioSaric
+"Dunn,Kris",0.0,2.0,505,0.004,Most Improved Player,2018,KrisDunn
+"Gordon,Aaron",0.0,2.0,505,0.004,Most Improved Player,2018,AaronGordon
+"Harrell,Montrezl",0.0,1.0,505,0.002,Most Improved Player,2018,MontrezlHarrell
+"Porziņģis,Kristaps",0.0,1.0,505,0.002,Most Improved Player,2018,KristapsPorzingis
+"Richardson,Josh",0.0,1.0,505,0.002,Most Improved Player,2018,JoshRichardson
+"Rubio,Ricky",0.0,1.0,505,0.002,Most Improved Player,2018,RickyRubio
+"Siakam,Pascal",0.0,1.0,505,0.002,Most Improved Player,2018,PascalSiakam
+"Towns,Karl-Anthony",0.0,1.0,505,0.002,Most Improved Player,2018,KarlAnthonyTowns
+"Waller-Prince,Taurean",0.0,1.0,505,0.002,Most Improved Player,2018,TaureanWallerPrince
+"Warren,T.J.",0.0,1.0,505,0.002,Most Improved Player,2018,TJWarren
+"Antetokounmpo,Giannis",78.0,941.0,1010,0.932,Most Valuable Player,2019,GiannisAntetokounmpo
+"Harden,James",23.0,776.0,1010,0.768,Most Valuable Player,2019,JamesHarden
+"George,Paul",0.0,356.0,1010,0.352,Most Valuable Player,2019,PaulGeorge
+"Jokić,Nikola",0.0,212.0,1010,0.210,Most Valuable Player,2019,NikolaJokic
+"Curry,Stephen",0.0,175.0,1010,0.173,Most Valuable Player,2019,StephenCurry
+"Lillard,Damian",0.0,69.0,1010,0.068,Most Valuable Player,2019,DamianLillard
+"Embiid,Joel",0.0,49.0,1010,0.049,Most Valuable Player,2019,JoelEmbiid
+"Durant,Kevin",0.0,25.0,1010,0.025,Most Valuable Player,2019,KevinDurant
+"Leonard,Kawhi",0.0,13.0,1010,0.013,Most Valuable Player,2019,KawhiLeonard
+"Westbrook,Russell",0.0,8.0,1010,0.008,Most Valuable Player,2019,RussellWestbrook
+"Gobert,Rudy",0.0,1.0,1010,0.001,Most Valuable Player,2019,RudyGobert
+"James,LeBron",0.0,1.0,1010,0.001,Most Valuable Player,2019,LeBronJames
+"Dončić,Luka",98.0,496.0,500,0.992,Rookie of the Year,2019,LukaDoncic
+"Young,Trae",2.0,301.0,500,0.602,Rookie of the Year,2019,TraeYoung
+"Ayton,Deandre",0.0,66.0,500,0.132,Rookie of the Year,2019,DeandreAyton
+"Jackson,Jaren",0.0,12.0,500,0.024,Rookie of the Year,2019,JarenJackson
+"Sexton,Collin",0.0,10.0,500,0.020,Rookie of the Year,2019,CollinSexton
+"Gilgeous-Alexander,Shai",0.0,7.0,500,0.014,Rookie of the Year,2019,ShaiGilgeousAlexander
+"Bagley,Marvin",0.0,6.0,500,0.012,Rookie of the Year,2019,MarvinBagley
+"Okogie,Josh",0.0,1.0,500,0.002,Rookie of the Year,2019,JoshOkogie
+"Robinson,Mitchell",0.0,1.0,500,0.002,Rookie of the Year,2019,MitchellRobinson
+"Gobert,Rudy",65.0,411.0,500,0.822,Defensive Player of the Year,2019,RudyGobert
+"Antetokounmpo,Giannis",26.0,280.0,500,0.560,Defensive Player of the Year,2019,GiannisAntetokounmpo
+"George,Paul",6.0,150.0,500,0.300,Defensive Player of the Year,2019,PaulGeorge
+"Embiid,Joel",1.0,26.0,500,0.052,Defensive Player of the Year,2019,JoelEmbiid
+"Turner,Myles",0.0,15.0,500,0.030,Defensive Player of the Year,2019,MylesTurner
+"Green,Draymond",1.0,6.0,500,0.012,Defensive Player of the Year,2019,DraymondGreen
+"Leonard,Kawhi",1.0,6.0,500,0.012,Defensive Player of the Year,2019,KawhiLeonard
+"Smart,Marcus",0.0,4.0,500,0.008,Defensive Player of the Year,2019,MarcusSmart
+"Allen,Jarrett",0.0,1.0,500,0.002,Defensive Player of the Year,2019,JarrettAllen
+"Beverley,Patrick",0.0,1.0,500,0.002,Defensive Player of the Year,2019,PatrickBeverley
+"Williams,Lou",96.0,489.0,500,0.978,Sixth Man of the Year,2019,LouWilliams
+"Sabonis,Domantas",1.0,190.0,500,0.380,Sixth Man of the Year,2019,DomantasSabonis
+"Harrell,Montrezl",2.0,142.0,500,0.284,Sixth Man of the Year,2019,MontrezlHarrell
+"Dinwiddie,Spencer",0.0,34.0,500,0.068,Sixth Man of the Year,2019,SpencerDinwiddie
+"Ross,Terrence",0.0,12.0,500,0.024,Sixth Man of the Year,2019,TerrenceRoss
+"Rose,Derrick",0.0,11.0,500,0.022,Sixth Man of the Year,2019,DerrickRose
+"Wade,Dwyane",0.0,8.0,500,0.016,Sixth Man of the Year,2019,DwyaneWade
+"Schröder,Dennis",1.0,5.0,500,0.010,Sixth Man of the Year,2019,DennisSchroder
+"Morris,Monte",0.0,3.0,500,0.006,Sixth Man of the Year,2019,MonteMorris
+"Iguodala,Andre",0.0,2.0,500,0.004,Sixth Man of the Year,2019,AndreIguodala
+"Beasley,Malik",0.0,1.0,500,0.002,Sixth Man of the Year,2019,MalikBeasley
+"Bertāns,Dāvis",0.0,1.0,500,0.002,Sixth Man of the Year,2019,DavisBertans
+"Crowder,Jae",0.0,1.0,500,0.002,Sixth Man of the Year,2019,JaeCrowder
+"Davis,Ed",0.0,1.0,500,0.002,Sixth Man of the Year,2019,EdDavis
+"Siakam,Pascal",86.0,469.0,500,0.938,Most Improved Player,2019,PascalSiakam
+"Russell,D'Angelo",12.0,255.0,500,0.510,Most Improved Player,2019,DAngeloRussell
+"Fox,De'Aaron",1.0,77.0,500,0.154,Most Improved Player,2019,DeAaronFox
+"Hield,Buddy",0.0,22.0,500,0.044,Most Improved Player,2019,BuddyHield
+"Vučević,Nikola",0.0,20.0,500,0.040,Most Improved Player,2019,NikolaVucevic
+"Sabonis,Domantas",0.0,10.0,500,0.020,Most Improved Player,2019,DomantasSabonis
+"Harrell,Montrezl",0.0,9.0,500,0.018,Most Improved Player,2019,MontrezlHarrell
+"Rose,Derrick",1.0,8.0,500,0.016,Most Improved Player,2019,DerrickRose
+"Collins,John",0.0,6.0,500,0.012,Most Improved Player,2019,JohnCollins
+"Antetokounmpo,Giannis",0.0,4.0,500,0.008,Most Improved Player,2019,GiannisAntetokounmpo
+"Beasley,Malik",0.0,3.0,500,0.006,Most Improved Player,2019,MalikBeasley
+"Gallinari,Danilo",0.0,3.0,500,0.006,Most Improved Player,2019,DaniloGallinari
+"George,Paul",0.0,3.0,500,0.006,Most Improved Player,2019,PaulGeorge
+"Bogdanović,Bojan",0.0,2.0,500,0.004,Most Improved Player,2019,BojanBogdanovic
+"Bryant,Thomas",0.0,2.0,500,0.004,Most Improved Player,2019,ThomasBryant
+"Cauley-Stein,Willie",0.0,1.0,500,0.002,Most Improved Player,2019,WillieCauleyStein
+"Dinwiddie,Spencer",0.0,1.0,500,0.002,Most Improved Player,2019,SpencerDinwiddie
+"Forbes,Bryn",0.0,1.0,500,0.002,Most Improved Player,2019,BrynForbes
+"Grant,Jerami",0.0,1.0,500,0.002,Most Improved Player,2019,JeramiGrant
+"LaVine,Zach",0.0,1.0,500,0.002,Most Improved Player,2019,ZachLaVine
+"Richardson,Josh",0.0,1.0,500,0.002,Most Improved Player,2019,JoshRichardson
+"White,Derrick",0.0,1.0,500,0.002,Most Improved Player,2019,DerrickWhite
