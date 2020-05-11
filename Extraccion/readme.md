@@ -1,6 +1,6 @@
 # Extracción de datos:  
 
-La extracción de los datos se lleva a cabo realizando scrapping a distintos endpoints mediante Python empleando las librerías `request`, para realizar las peticiones y `Pandas` para recopilar la información en DataFrames, principalmente. El proceso se basa en descomponer mediante la función **Split** la respuesta del endpoint para recopilar la información útil y desechar el resto, también se llevan a cabo en estos procesos unas transformaciones mínimas en los datos y uniones de DataFrames cuando es necesario, para dar lugar a ficheros csv que contengan la información que necesitamos para el análisis. 
+La extracción de los datos se lleva a cabo realizando scrapping a distintos endpoints mediante Python empleando las librerías `request`, para realizar las peticiones y `Pandas` para recopilar la información en DataFrames, principalmente. El proceso se basa en descomponer mediante la función "Split" la respuesta del endpoint para recopilar la información útil y desechar el resto, también se llevan a cabo en estos procesos unas transformaciones mínimas en los datos y uniones de DataFrames cuando es necesario, para dar lugar a ficheros csv que contengan la información que necesitamos para el análisis. 
 Mayoritariamente extraemos la información de www.basketballreference.com. También consumimos información de data.nba.net, de www.shrpsports.com y www.geodatos.net.    
 
 ## Extractores: 
