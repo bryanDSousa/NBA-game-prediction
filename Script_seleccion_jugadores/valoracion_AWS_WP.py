@@ -9,8 +9,8 @@ def list_diff(list1, list2):
     return(list(set(list1) - set(list2)))
 
 premios = pd.read_csv("Extraccion/Premios_10_05_20/Premios_10_05_20.csv")
-AWS =  pd.read_csv("Script_seleccion_jugadores/AWS_TOP30.csv")
-WP =  pd.read_csv("Script_seleccion_jugadores/WP_TOP30.csv")
+AWS =  pd.read_csv("Script_seleccion_jugadores/AWS_totaljugadores.csv")
+WP =  pd.read_csv("Script_seleccion_jugadores/WP_totaljugadores.csv")
 sueldos = pd.read_csv("Extraccion/Sueldos/sueldos_jugadores.csv")
 seasons = [2018, 2019]
 li = []
@@ -20,15 +20,15 @@ for season in seasons:
     maximo = len(df_Premios)
     df_Premios = df_Premios.head(maximo)
     df_Premios["Posicion"] = np.arange(1,maximo + 1,1)
-    df_Premios = df_Premios[["Posicion", "nombre", "primero"]]
+    df_Premios = df_Premios[["Posicion", "nombre", "puntos", "primero"]]
     #"nombre": "premios"
-    df_Premios.rename(columns = {"nombre": "Premios"}, inplace = True)
+    df_Premios.rename(columns = {"nombre": "Premios", "puntos": "puntos_MVP"}, inplace = True)
 
     df_AWS = AWS[AWS["Season"] == season ]
     df_AWS = df_AWS.sort_values(by=['AWS_MEAN'], ascending = False)
-    df_AWS = df_AWS.head(30)
-    df_AWS["Posicion"] = np.arange(1,30 + 1,1)
-    df_AWS = df_AWS[["Posicion", "Name"]]
+    df_AWS = df_AWS
+    df_AWS["Posicion"] = np.arange(1,len(df_AWS) + 1,1)
+    df_AWS = df_AWS[["Posicion", "Name", "AWS_MEAN"]]
     #"Name": "AWS"
     df_AWS.rename(columns = {"Name": "AWS"}, inplace = True)
 
@@ -37,9 +37,9 @@ for season in seasons:
 
     df_WP = WP[WP["Season"] == season ]
     df_WP = df_WP.sort_values(by=['WP_MEAN'], ascending = False)
-    df_WP = df_WP.head(30)
-    df_WP["Posicion"] = np.arange(1,30 + 1,1)
-    df_WP = df_WP[["Posicion", "Name", "Season"]]
+    df_WP = df_WP
+    df_WP["Posicion"] = np.arange(1,len(df_WP) + 1,1)
+    df_WP = df_WP[["Posicion", "Name", "Season", "WP_MEAN"]]
     #"Name": "WP"
     df_WP.rename(columns = {"Name": "WP"}, inplace = True)
     df_joined = df_joined.merge(df_WP, on = "Posicion", how = "right")
@@ -56,8 +56,8 @@ for season in seasons:
 
     df_sueldos = sueldos[sueldos["Temporada"] == season]
     df_sueldos = df_sueldos.sort_values(by=['Sueldo'], ascending = False)
-    df_sueldos = df_sueldos.head(30)
-    df_sueldos["Posicion"] = np.arange(1,30 + 1,1)
+    df_sueldos = df_sueldos
+    df_sueldos["Posicion"] = np.arange(1,len(df_sueldos) + 1,1)
     df_sueldos = df_sueldos[["Posicion", "Nombre"]]
     df_sueldos["Nombre"] = df_sueldos["Nombre"].str.split().str[1] + "," + df_sueldos["Nombre"].str.split().str[0]
     df_sueldos.rename(columns = {"Nombre": "Sueldos"}, inplace = True)

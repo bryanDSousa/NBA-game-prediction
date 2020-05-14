@@ -275,8 +275,10 @@ Resultados_clasificacion_final = Resultados_clasificacion_final.merge(df_joined,
 Resultados_clasificacion_final["local_ft_pct"].fillna(0, inplace=True)
 Resultados_clasificacion_final["visitor_ft_pct"].fillna(0, inplace=True)
 
-Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == 0, 'Result'] = 1
-Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == 1, 'Result'] = 0
+Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == 0, 'Result'] = "W"
+Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == 1, 'Result'] = "L"
+Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == "W", 'Result'] = 1
+Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == "L", 'Result'] = 0
 
 ############### WP 
 #TODO REVISAR

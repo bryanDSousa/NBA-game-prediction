@@ -1,7 +1,20 @@
 # Extracción de datos:  
 
-La extracción de los datos se lleva a cabo realizando scrapping a distintos endpoints mediante Python empleando las librerías `request`, para realizar las peticiones y `Pandas` para recopilar la información en DataFrames, principalmente. El proceso se basa en descomponer mediante la función "Split" la respuesta del endpoint para recopilar la información útil y desechar el resto, también se llevan a cabo en estos procesos unas transformaciones mínimas en los datos y uniones de DataFrames cuando es necesario, para dar lugar a ficheros csv que contengan la información que necesitamos para el análisis. 
-Mayoritariamente extraemos la información de www.basketballreference.com. También consumimos información de data.nba.net, de www.shrpsports.com y www.geodatos.net.    
+La extracción de los datos se lleva a cabo realizando scrapping a distintos endpoints mediante Python empleando las librerías `request`, para realizar las peticiones y `Pandas` para recopilar la información en DataFrames, principalmente. El proceso se basa en descomponer mediante la función "Split" la respuesta del endpoint para recopilar la información útil y desechar el resto, también se llevan a cabo en estos procesos unas transformaciones mínimas en los datos y uniones de DataFrames cuando es necesario, para dar lugar a ficheros csv que contengan la información que necesitamos para el análisis. Para dividir correctamente la respuesta de la request y generar el DataFrame hay que analizar el texto plano que llega y observar los patrones que repiten, de este modo conseguimos transformar la información no estructurada, o semi estructurada, a información estructurada con la que podemos realizar nuestro análisis. Este proceso también nos permitirá acceder a una mayor cantidad de información que si empleasemos un DataFrame de los suministrados en páginas como Kaggle, también nos permitirá incorporar más variables a nuestro estudio y obtener otra información que utilizaremos como referencia o control a algunas de las medidas de nuestro análisis. 
+
+Mayoritariamente extraeremos la información de www.basketballreference.com. También consumimos información de data.nba.net, de www.shrpsports.com y www.geodatos.net. Realizaremos las llamadas de forma que no sature a los receptores de las mismas, es decir, de manera secuencial (sin yield), como podemos ver en la imagen. Como contrapartida nos encontraremos con procesos muy costosos en el tiempo. 
+
+![Texto alternativo](img/imagen.jpg)
+
+Obtendremos mediante los extractores información relativa a:
+* Convocatoria de los partidos
+* Clasificación previa al encuentro
+* Estadísticas de los partidos (Boxscore)
+* Nominaciones a los premios individuales
+* Sueldos
+* Distancias entre las ciudades que tienen equipo en la NBA 
+* Estadísticas al descanso
+* Evolución del juego (estadísticas acumuladas de todos los equipos, por temporada) 
 
 ## Extractores: 
 
