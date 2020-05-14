@@ -27,7 +27,7 @@ Comparamos finalmente las puntuaciones de las diferentes variables normalizadas 
 
 Ambas variables han probado su efectividad para evaluar el desempeño individual de los jugadores. 
 
-En vista de las últimas gráficas, WP parece seguir más adecuadamente el orden de las votaciones al mejor jugador del MVP, ya que los cambios del signo de la pendiente de la curva son menos y menos bruscos.
+En vista de las últimas gráficas, WP parece seguir más adecuadamente el orden de las votaciones al mejor jugador del MVP. Tal y como están representados los datos un cambio del signo de la peniente representa una ordenación diferente a la de la votación del MVP. En el caso de WP, los cambios del signo de la pendiente de la curva son menos y menos bruscos. 
 
 
 
