@@ -170,5 +170,9 @@ Además de los campos obtenidos directamente de la web se realizan transformacio
 * **WP_MEDIO_AGRUPADO**: Se trata de una medida análoga al AWS 
 * **Boxscore medio agrupado**: Todas las varibles recogidas en el Boxscore a nivel de equipo se calculan con el mismo rolling mean explicado anteriormente para obtener el valor medio de las mismas por equipo antes del partido.
 
-De este modo el fichero de entrada al modelo contiene una gran cantidad de información, mucho más rica que la tabla de estadísticas en la que se recogen habitualmente los desempeños a nivel individual y colectivo de cada partido. El fichero que generamos incluye gran variedad de fuentes y campos obtenidos a través de operativas complejas.  
+De este modo el fichero de entrada al modelo contiene una gran cantidad de información, mucho más rica que la tabla de estadísticas en la que se recogen habitualmente los desempeños a nivel individual y colectivo de cada partido. El fichero que generamos incluye gran variedad de fuentes y campos obtenidos a través de operativas complejas. 
+
+El flujo de la extracción y transformación del dato para generar un fichero de entrada es el siguiente:
+
+![Diagrama](img/diagrama.jpg)
 
