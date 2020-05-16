@@ -56,6 +56,10 @@ Extrae la información para cada jugador de sus estadísticas en cada partido de
       * ORtg -- Offensive Rating
       * DRtg -- Defensive Rating
       * BPM -- Box Plus/Minus
+    
+Vemos aquí un ejemplo del Boxscore a scrapear (https://www.basketball-reference.com/boxscores/201910220TOR.html): 
+
+![Boxscore](img/boxscore.jpg)
 
 **2.	StatsJugadoresV2_h1.py:**  
 Extrae la información para cada jugador de sus estadísticas al descanso en cada partido desde 2010 a 2020. Se realiza una llamada para obtener el calendario del equipo, que nos devuelve las URL del boxscore de cada partido. En el mismo python se agrupa por partido y equipo para dar lugar a un DF en el formato requerido por el modelo. Iterativamente realizamos las llamadas a basketball-reference y recogemos los siguientes datos:
@@ -145,6 +149,7 @@ El fichero final queremos que contenga la siguiente información:
 | -- | -- |
 | Clasificación antes del partido (posición, rachas, etc.) | ResultadosClasificacionV2.py |
 | Estadisticas al descanso | StatsJugadoresV2_h1.py |
+| Estadisticas medias antes del partido |  ResultadosClasificacionV2.py |
 | Suma de los sueldos del equipo | sueldos.py |
 | AWS |  StatsJugadoresV2.py |
 | WP  | StatsJugadoresV2.py y ResultadosClasificacionV2.py |
@@ -163,6 +168,7 @@ Además de los campos obtenidos directamente de la web se realizan transformacio
 
 * **AWS_MEDIO_AGRUPADO**: La medida AWS será explicada más adelante, una vez calculada para cada jugador, hacemos un rolling mean y un shift, para obtener la media hasta antes del partido del jugador en la temporada, posteriormente se agrupan por equipo y se realiza el join, obteniendo una valoración conjunta de los jugadores que participan en el encuentro por equipo. 
 * **WP_MEDIO_AGRUPADO**: Se trata de una medida análoga al AWS 
+* **Boxscore medio agrupado**: Todas las varibles recogidas en el Boxscore a nivel de equipo se calculan con el mismo rolling mean explicado anteriormente para obtener el valor medio de las mismas por equipo antes del partido.
 
 De este modo el fichero de entrada al modelo contiene una gran cantidad de información, mucho más rica que la tabla de estadísticas en la que se recogen habitualmente los desempeños a nivel individual y colectivo de cada partido. El fichero que generamos incluye gran variedad de fuentes y campos obtenidos a través de operativas complejas.  
 
