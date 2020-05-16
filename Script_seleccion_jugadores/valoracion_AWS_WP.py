@@ -9,8 +9,10 @@ def list_diff(list1, list2):
     return(list(set(list1) - set(list2)))
 
 premios = pd.read_csv("Extraccion/Premios_10_05_20/Premios_10_05_20.csv")
-AWS =  pd.read_csv("Script_seleccion_jugadores/AWS_totaljugadores.csv")
-WP =  pd.read_csv("Script_seleccion_jugadores/WP_totaljugadores.csv")
+AWS =  pd.read_csv("Script_seleccion_jugadores/docus15.05/jugadores_AWS_temp.csv")
+WP =  pd.read_csv("Script_seleccion_jugadores/docus15.05/jugadores_WP_temp.csv")
+WP_adj =  pd.read_csv("Script_seleccion_jugadores/docus15.05/jugadores_WP_adj_temp.csv")
+
 sueldos = pd.read_csv("Extraccion/Sueldos/sueldos_jugadores.csv")
 seasons = [2018, 2019]
 li = []
@@ -25,10 +27,10 @@ for season in seasons:
     df_Premios.rename(columns = {"nombre": "Premios", "puntos": "puntos_MVP"}, inplace = True)
 
     df_AWS = AWS[AWS["Season"] == season ]
-    df_AWS = df_AWS.sort_values(by=['AWS_MEAN'], ascending = False)
+    df_AWS = df_AWS.sort_values(by=['AWS_temp'], ascending = False)
     df_AWS = df_AWS
     df_AWS["Posicion"] = np.arange(1,len(df_AWS) + 1,1)
-    df_AWS = df_AWS[["Posicion", "Name", "AWS_MEAN"]]
+    df_AWS = df_AWS[["Posicion", "Name", "AWS_temp"]]
     #"Name": "AWS"
     df_AWS.rename(columns = {"Name": "AWS"}, inplace = True)
 
@@ -36,13 +38,21 @@ for season in seasons:
     #df_joined['Premios-AWS'] = np.where(df_joined['Premios'] == df_joined['AWS'], True, False)
 
     df_WP = WP[WP["Season"] == season ]
-    df_WP = df_WP.sort_values(by=['WP_MEAN'], ascending = False)
-    df_WP = df_WP
+    df_WP = df_WP.sort_values(by=['WP_season'], ascending = False)
     df_WP["Posicion"] = np.arange(1,len(df_WP) + 1,1)
-    df_WP = df_WP[["Posicion", "Name", "Season", "WP_MEAN"]]
+    df_WP = df_WP[["Posicion", "Name", "Season", "WP_season"]]
     #"Name": "WP"
     df_WP.rename(columns = {"Name": "WP"}, inplace = True)
     df_joined = df_joined.merge(df_WP, on = "Posicion", how = "right")
+
+    df_WP_adj = WP_adj[WP["Season"] == season ]
+    df_WP_adj = df_WP_adj.sort_values(by=['WP_adj_season'], ascending = False)
+    df_WP_adj["Posicion"] = np.arange(1,len(df_WP_adj) + 1,1)
+    df_WP_adj = df_WP_adj[["Posicion", "Name", "WP_adj_season"]]
+    #"Name": "WP"
+    df_WP_adj.rename(columns = {"Name": "WP_adj"}, inplace = True)
+    df_joined = df_joined.merge(df_WP_adj, on = "Posicion", how = "right")
+
 
     df_Defensivo = premios[(premios["año"] == season) & (premios["award"] == "Defensive Player of the Year")]
     df_Defensivo = df_Defensivo.sort_values(by=['puntos'], ascending = False)
@@ -65,16 +75,20 @@ for season in seasons:
     df_joined = df_joined.merge(df_sueldos, on = "Posicion", how = "left")
     aux_AWS = 0
     aux_WP = 0
+    aux_WP_adj = 0
     i = 0
     for jugador in df_joined["Premios"]:
         i = i + 1
-        if(jugador in df_joined["AWS"].tolist()):
+        if(jugador in df_joined["AWS"].head(30).tolist()):
             aux_AWS = aux_AWS + 1 
-        if(jugador in df_joined["WP"].tolist()):
-            aux_WP = aux_WP + 1
+        if(jugador in df_joined["WP"].head(30).tolist()):
+            aux_WP = aux_WP + 1 
+        if(jugador in df_joined["WP_adj"].head(30).tolist()):
+            aux_WP_adj = aux_WP_adj + 1
     print("###########", season ,"###########")
     print("AWS", aux_AWS, "aciertos de", maximo, "respecto a premio MVP")
     print("WP", aux_WP, "aciertos de", maximo, "respecto a premio MVP")
+    print("WP_adj", aux_WP_adj, "aciertos")
 
     aux_AWS = 0
     aux_WP = 0
