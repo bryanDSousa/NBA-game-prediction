@@ -1,6 +1,6 @@
-## Evaluacion comparativa entre AWS y WP
+## Evaluacion de AWS y WP
 
-La información de las votaciones de los distintos premios obtenida en premios.py nos servirá para evaluar las medidas AWS y WP. Para compararlas evaluaremos el TOP de jugadores siguiente diferentes citerios y veremos qué medida da mejores resultados en base a diferentes métricas. 
+La información de las votaciones de los distintos premios obtenida en premios.py nos servirá para evaluar las medidas AWS y WP. Para compararlas evaluaremos el TOP de jugadores siguiente diferentes citerios y si los resultados que obtenemos coinciden con lo esperable.
 
 El premio más importante de la temporada es el MVP (Most Valuable Player), se otorga todos los años al final de la temporada regular por votación. Esta votación es realizada por 125 miembros; 3 votos por cada equipo de la NBA, y 35 periodistas y analistas especializados de medios de comunicación. Cada uno de los miembros vota cinco jugadores, dando diez puntos al primer puesto, siete al segundo, cinco al tercero, tres al cuarto y uno al quinto. 
 
@@ -13,21 +13,21 @@ Por ejemplo, en 2018 vemos:
 
 En vista de los resultados podemos concluir que ambas variables tienen un desempeño muy similar, habrá que esperar al modelado para ver cual explica mejor el resultado del partido, pero podemos afirmar que ambas dan como mejores jugadores valores esperables y lógicos. En la siguiente tabla comparamos los mejores jugadores según los diferentes criterios.
 
-![comparativa](img/comparativa_TOP.JPG)
+![comparativa](img/comparativa_TOP_2.JPG)
 
 También vemos un desequilibrio sorprendente en los jugadores con sueldos mayores y los nominados al MVP, así como entre los sueldos y los TOP30 de las medidas que hemos calculado.
 
 Comparamos finalmente las puntuaciones de las diferentes variables normalizadas para los jugadores más votados al MVP:
 
-![2018](img/comparativa_2018.png)
+![2018](img/comparativa_2018_2.png)
 
-![2018](img/comparativa_2019.png)
+![2018](img/comparativa_2019_2.png)
 
 ### Conclusiones
 
-Ambas variables han probado su efectividad para evaluar el desempeño individual de los jugadores. 
+En un vistazo rápido vemos, por ejemplo, que dos de las mayores discrepancias en la ordenación del TOP de cada medida en 2018 son Stephen Curry y Kevin Durant, teniendo estos un peor resultado en las votaciones para MVP que siguiendo nuestras métricas. Estos jugadores son las dos estrellas del equipo campeón en esa temporada, Golden State Warriors, es decir, le podemos dar ventaja al criterio de AWS / WP frente al resultado de la votación. 
 
-En vista de las últimas gráficas, WP parece seguir más adecuadamente el orden de las votaciones al mejor jugador del MVP. Tal y como están representados los datos un cambio del signo de la peniente representa una ordenación diferente a la de la votación del MVP. En el caso de WP, los cambios del signo de la pendiente de la curva son menos y menos bruscos. 
+En conclusión, hemos conseguido un criterio para evaluar el desempeño de los jugadores mejor que los criterios existentes, liberando este análisis de los percepciones subjetivas y simpatías personales. Evaluaremos la media de cada equipo de estas variables antes del partido en el modelo, utilizando estas métricas como rating de la plantilla de cada equipo. 
 
 
 
