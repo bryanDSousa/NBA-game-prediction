@@ -282,8 +282,26 @@ Resultados_clasificacion_final.loc[Resultados_clasificacion_final['Result'] == "
 
 ############### WP 
 #TODO REVISAR
-partidos = Resultados_clasificacion_final.drop_duplicates()
-partidos = partidos.dropna()
+#partidos = Resultados_clasificacion_final.drop_duplicates()
+
+path='partidos_V3_30_04_20'
+names_list = os.listdir(path)
+li = []
+
+for name in names_list:
+    df = pd.read_csv(path+"/"+name)
+    li.append(df)
+
+Resultados_clasificacion1 = pd.concat(li, axis=0, ignore_index=True)
+Resultados_clasificacion1 = Resultados_clasificacion1.drop(['Season'], axis=1)
+Resultados_clasificacion1.rename( columns = {
+                                "boxcore_url": "ID Partido",
+                                "Year_x": "Year", 
+                                "Season_x": "Season"},  
+                                inplace = True)  
+
+### RENAME  
+partidos = Resultados_clasificacion1.dropna()
 # Modificamos el formato de algunas variables 
 
 partidos = partidos.drop(columns=['Date'])
@@ -295,6 +313,7 @@ partidos['Points'] = partidos['Points'].astype(int)
 partidos['Opponent_Points'] = partidos['Opponent_Points'].astype(int)
 partidos['Result_local'] = np.where(partidos['Points'] > partidos['Opponent_Points'], 'W', 'L')
 partidos['Result_visitor'] = np.where(partidos['Points'] < partidos['Opponent_Points'], 'W', 'L')
+
 
 
 # Seleccionamos las temporadas a incluir en nuestro modelo
@@ -310,25 +329,33 @@ partidos = partidos.loc[partidos['Season'] >= temporada]
 
 partidos_visitor = partidos.loc[:, ['Date', 'Year', 'Season', 'ID Partido', 'local_team', 'visitor_team', 'Opponent_Points', 
            'Result_visitor', 'visitor_fg', 'visitor_fga', 'visitor_fg_pct', 'visitor_fg3', 'visitor_fg3a','visitor_fg3_pct',
-           'visitor_ft', 'visitor_fta', 'visitor_ft_pct', 'visitor_orb', 'visitor_drb', 'visitor_ast', 'visitor_stl', 
+           'visitor_ft', 'visitor_fta', 'visitor_ft_pct', 'visitor_orb', 'visitor_drb', 'visitor_ast', 'visitor_trn', 'visitor_stl', 
            'visitor_blk', 'visitor_tov', 'visitor_pf', 'visitor_pts', 'visitor_Conf_position', 'visitor_Win', 'visitor_Lose', 
            'visitor_Percentagewl', 'visitor_Dif_leader', 'visitor_Home_win', 'visitor_Home_lose', 'visitor_Away_win', 
            'visitor_Away_lose', 'visitor_Div_win', 'visitor_Div_lose', 'visitor_Cnf_win', 'visitor_Cnf_lose', 'visitor_Icf_win',
-           'visitor_Icf_lose', 'local_ft', 'local_fg3', 'local_fg', 'local_tov', 'Sueldo visitante', 'Visitor_Division', 
-           'Visitor_Conferencia', 'visitor_trb', 'VISITANTE_Ultimos10Victorias', 'VISITANTE_Ultimos10Derrotas', 
-           'VISITANTE_Racha', 'VISITOR_AWS_MEDIO_AGRUPADO']]
+           'visitor_Icf_lose', 'local_ft', 'local_fg3', 'local_fg', 'local_tov']]
+
 
 
 # Eliminamos los datos del visitante para el DF del local
 
-partidos = partidos.drop(columns=['Opponent_Points', 'Result_visitor', 'Result', 'visitor_fga', 'visitor_fg_pct',
+partidos = partidos.drop(columns=['FechaOrd', 'Opponent_Points', 'Result_visitor', 'Result', 'visitor_fga', 'visitor_fg_pct',
            'visitor_fg3a','visitor_fg3_pct', 'visitor_fta', 'visitor_ft_pct', 'visitor_orb', 'visitor_drb', 
            'visitor_ast', 'visitor_stl', 'visitor_blk', 'visitor_pf', 'visitor_pts', 'visitor_Conf_position',
-           'visitor_Win', 'visitor_Lose', 'visitor_trb', 'visitor_Percentagewl', 'visitor_Dif_leader', 'visitor_Home_win',
+           'visitor_Win', 'visitor_Lose', 'visitor_trn', 'visitor_Percentagewl', 'visitor_Dif_leader', 'visitor_Home_win',
            'visitor_Home_lose', 'visitor_Away_win','visitor_Away_lose', 'visitor_Div_win', 'visitor_Div_lose','visitor_Cnf_win',
-           'visitor_Cnf_lose', 'visitor_Icf_win', 'visitor_Icf_lose', 'Sueldo visitante', 'Visitor_Division',
-           'Visitor_Conferencia', 'VISITANTE_Ultimos10Victorias', 'VISITANTE_Ultimos10Derrotas', 'VISITANTE_Racha',
-            'VISITOR_AWS_MEDIO_AGRUPADO'])
+           'visitor_Cnf_lose', 'visitor_Icf_win', 'visitor_Icf_lose', 'VISITANTE_Ultimos10Victorias', 'VISITANTE_Ultimos10Derrotas', 'Year_y', 'Season_y',
+            'local_true_shooting_pct', 'local_effective_fg_pct',
+            'Local', 'LOCAL_Ultimos10Victorias', 'LOCAL_Ultimos10Derrotas', 'LOCAL_Racha', 'VISITANTE_Racha',
+            'local_3pa_rate', 'local_fta_rate', 'local_orb_pct', 'local_drb_pct',
+            'local_trb_pct', 'local_ast_pct', 'local_stl_pct', 'local_blk_pct',
+            'local_tov_pct', 'local_off_rate', 'local_def_rate', 
+            'visitor_true_shooting_pct', 'visitor_effective_fg_pct',
+            'visitor_3pa_rate', 'visitor_fta_rate', 'visitor_orb_pct',
+            'visitor_drb_pct', 'visitor_trb_pct', 'visitor_ast_pct',
+            'visitor_stl_pct', 'visitor_blk_pct', 'visitor_tov_pct',
+            'visitor_off_rate', 'visitor_def_rate'])
+
 
 
 # Unificamos los nombres de las variables en ambos DF
@@ -338,8 +365,8 @@ partidos = partidos.rename(columns=lambda x: x.replace('LOCAL_', ''))
 partidos = partidos.rename(columns=lambda x: x.replace('Local_', ''))
 
 partidos.rename(columns={'Result_local': 'Result', 'team': 'team_PoV', 'visitor_team': 'Opponent_team', 
-                         'visitor_ft': 'FTM_opp', 'visitor_fg': 'FG_opp', 'visitor_fg3': '3FGM_opp', 'visitor_tov': 'TO_opp',
-                         'Sueldo local': 'Sueldo'}, inplace=True)
+                         'visitor_ft': 'FTM_opp', 'visitor_fg': 'FG_opp', 'visitor_fg3': '3FGM_opp', 'visitor_tov': 'TO_opp'
+                         }, inplace=True)
 
 
 partidos_visitor = partidos_visitor.rename(columns=lambda x: x.replace('visitor_', ''))
@@ -349,10 +376,18 @@ partidos_visitor = partidos_visitor.rename(columns=lambda x: x.replace('VISITOR_
 
 partidos_visitor.rename(columns={'Result_visitor': 'Result', 'team': 'team_PoV', 'local_team': 'Opponent_team', 
                                  'Opponent_Points': 'Points', 'local_ft': 'FTM_opp', 'local_fg': 'FG_opp', 
-                                 'local_fg3': '3FGM_opp', 'local_tov': 'TO_opp', 'Sueldo visitante':'Sueldo'}, inplace=True)
+                                 'local_fg3': '3FGM_opp', 'local_tov': 'TO_opp'}, inplace=True)
 
+partidos_visitor = partidos_visitor.drop(columns=["Year"])
+partidos = partidos.drop(columns=["Year"])
 
 # Unimos ambos DF verticamente 
+
+# for column in partidos.columns:
+#     print(column) 
+# print("###############")
+# for column in partidos_visitor.columns:
+#     print(column) 
 
 partidos_union = pd.concat([partidos, partidos_visitor])
 
@@ -719,7 +754,7 @@ df_1['Local'] = np.where(df_1['ID Partido'].str.slice(20, 23) == df_1['team'], T
 df_1_local = df_1[df_1['Local'] == True]
 df_1_local = df_1_local.drop_duplicates()
 
-df_1_visitante = df_1[df_1['Local'] == True]
+df_1_visitante = df_1[df_1['Local'] != True]
 df_1_visitante = df_1_visitante.drop_duplicates()
 
 columnas = ["ID Partido", 
