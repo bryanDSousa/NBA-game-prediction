@@ -17,12 +17,6 @@ En vista de los resultados podemos concluir que ambas variables tienen un desemp
 
 También vemos un desequilibrio sorprendente en los jugadores con sueldos mayores y los nominados al MVP, así como entre los sueldos y los TOP30 de las medidas que hemos calculado.
 
-Comparamos finalmente las puntuaciones de las diferentes variables normalizadas para los jugadores más votados al MVP:
-
-![2018](img/comparativa_2018_2.png)
-
-![2018](img/comparativa_2019_2.png)
-
 ### Conclusiones
 
 En un vistazo rápido vemos, por ejemplo, que dos de las mayores discrepancias en la ordenación del TOP de cada medida en 2018 son Stephen Curry y Kevin Durant, teniendo estos un peor resultado en las votaciones para MVP que siguiendo nuestras métricas. Estos jugadores son las dos estrellas del equipo campeón en esa temporada, Golden State Warriors, es decir, le podemos dar ventaja al criterio de AWS / WP frente al resultado de la votación. 
