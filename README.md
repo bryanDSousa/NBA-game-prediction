@@ -1,5 +1,7 @@
 # NBA-game-prediction
-Primer comentario sobre la elaboración del TFM del Máster en Data Analytics Semipresencial por parte de los siguientes integrantes:
+TFM del Máster en Data Analytics Semipresencial 2019-2020 del IMF Business School.
+
+Integrantes:
 
 Bryan Eduardo De Sousa Velásquez
 Juán García Bericua Goyanes
